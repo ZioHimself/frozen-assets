@@ -22,7 +22,11 @@ Static HTML/CSS/JavaScript website. No build process required.
 
 ## Usage
 
-Open `index.html` in a web browser or deploy to any static hosting service.
+The platform is currently available at: **https://ziohimself.github.io/frozen-assets/**
+
+For local development, open `index.html` in a web browser.
+
+*Note: Shortly, this will be hosted on a dedicated domain.*
 
 ## Contributing
 
