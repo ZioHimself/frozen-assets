@@ -1,0 +1,227 @@
+# Dependencies
+node_modules/
+bower_components/
+jspm_packages/
+
+# Build outputs
+dist/
+build/
+out/
+*.min.js
+*.min.css
+
+# Cache and temporary files
+.cache/
+.temp/
+.tmp/
+*.log
+*.tmp
+*.temp
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*.local
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.pnpm-debug.log
+.yarn/
+.yarn-integrity
+
+# IDE - VSCode / Cursor
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+*.code-workspace
+.cursor/
+.cursor-tutor/
+
+# IDE - Other
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# OS Files - macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# OS Files - Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# OS Files - Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+.jest/
+test-results/
+*.test.js.snap
+
+# Debugging
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Documentation build
+docs/_build/
+site/
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*~.nib
+
+# TypeScript (if you add TS later)
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Sass/SCSS
+.sass-cache/
+*.css.map
+
+# Webpack
+.webpack/
+
+# Parcel
+.parcel-cache/
+
+# Next.js (if you expand to Next)
+.next/
+next-env.d.ts
+
+# Vite (if you use Vite)
+.vite/
+
+# Local development
+.local/
+local/
+
+# Sensitive information
+secrets.json
+credentials.json
+*.pem
+*.key
+*.cert
+
+# Cloud IDE
+.c9/
+.cloud9/
+
+# Browser extensions development
+*.crx
+*.xpi
+
+# Image thumbnails
+*.thumb
+
+# Fonts (optional - uncomment if you don't want to track compiled fonts)
+# *.eot
+# *.ttf
+# *.woff
+# *.woff2
+
+# Optional: Uncomment if using specific tools
+
+# ESLint
+# .eslintcache
+
+# Prettier
+# .prettierignore
+
+# Stylelint
+# .stylelintcache
+
+# Serverless
+# .serverless/
+
+# FuseBox
+# .fusebox/
+
+# DynamoDB Local
+# .dynamodb/
+
+# TernJS
+# .tern-port
+
+# Stores VSCode versions used for testing
+# .vscode-test
+
+# Gatsby
+# .cache/
+# public/
+
+# Custom - Add your project-specific ignores below
+# ---------------------------------------------------

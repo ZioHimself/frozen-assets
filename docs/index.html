@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukraine Reconstruction Fund - Russian Frozen Assets</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #005BBB;
+            --primary-yellow: #FFD500;
+            --dark-blue: #003366;
+            --light-gray: #f5f5f5;
+            --text-dark: #333;
+            --text-light: #666;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--primary-yellow);
+            color: var(--dark-blue);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Presentation Section */
+        .presentation-section {
+            min-height: 100vh;
+            padding: 6rem 2rem 4rem;
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--dark-blue);
+            margin-bottom: 3rem;
+        }
+
+        .infographic-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .infographic-slide {
+            min-height: 80vh;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-title {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--primary-yellow);
+            padding-left: 1.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-yellow);
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Horizontal Scrolling Branch */
+        .branch-scroll-container {
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            display: flex;
+            gap: 2rem;
+            padding: 2rem 0;
+            margin: 2rem 0;
+        }
+
+        .branch-card {
+            min-width: 350px;
+            scroll-snap-align: start;
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--primary-blue);
+        }
+
+        .branch-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--primary-blue);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Database Section */
+        .database-section {
+            min-height: 100vh;
+            padding: 6rem 2rem 4rem;
+            background: white;
+        }
+
+        .database-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .search-bar {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 1.2rem 3rem 1.2rem 1.5rem;
+            font-size: 1.1rem;
+            border: 2px solid var(--primary-blue);
+            border-radius: 50px;
+            outline: none;
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-tab {
+            padding: 0.8rem 1.5rem;
+            background: var(--light-gray);
+            border: 2px solid transparent;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .filter-tab.active,
+        .filter-tab:hover {
+            background: var(--primary-blue);
+            color: white;
+            border-color: var(--primary-blue);
+        }
+
+        .documents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .document-card {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--primary-blue);
+        }
+
+        .document-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .document-type {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .document-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--dark-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .document-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .document-link {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .document-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Category Navigation */
+        .category-nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .category-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--light-gray);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 3px solid transparent;
+        }
+
+        .category-card:hover {
+            background: var(--primary-blue);
+            color: white;
+            border-color: var(--primary-yellow);
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-yellow);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+            }
+
+            .documents-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">🇺🇦 URF Initiative</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#presentation">Overview</a></li>
+                <li><a href="#database">Database</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Ukraine Reconstruction Fund</h1>
+            <p>Tracking Russian Frozen Assets for Rebuilding Ukraine</p>
+            <a href="#presentation" class="cta-button">Explore the Data</a>
+            <div class="scroll-indicator">
+                <span style="font-size: 2rem; color: white;">↓</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentation Section -->
+    <section id="presentation" class="presentation-section">
+        <h2 class="section-title">Understanding the Frozen Assets Initiative</h2>
+
+        <div class="infographic-container">
+            <!-- Slide 1: Overview -->
+            <div class="infographic-slide">
+                <h3 class="slide-title">Global Frozen Assets Overview</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">€300B+</div>
+                        <div class="stat-label">Total Frozen Assets</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">38</div>
+                        <div class="stat-label">Countries Involved</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">€50B</div>
+                        <div class="stat-label">Allocated for Reconstruction</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2024</div>
+                        <div class="stat-label">Initiative Launch Year</div>
+                    </div>
+                </div>
+                <p style="margin-top: 2rem; font-size: 1.1rem; text-align: center;">
+                    Following Russia's invasion of Ukraine, the international community took unprecedented action
+                    to freeze Russian state assets and utilize them for Ukraine's reconstruction efforts.
+                </p>
+            </div>
+
+            <!-- Slide 2: Regional Distribution -->
+            <div class="infographic-slide">
+                <h3 class="slide-title">Regional Asset Distribution</h3>
+                <div class="branch-scroll-container">
+                    <div class="branch-card">
+                        <h3>🇪🇺 European Union</h3>
+                        <p><strong>€210 billion frozen</strong></p>
+                        <p>Majority held in Euroclear (Belgium). Windfall profits from frozen assets being utilized for
+                            Ukraine aid packages.</p>
+                    </div>
+                    <div class="branch-card">
+                        <h3>🇺🇸 United States</h3>
+                        <p><strong>€58 billion frozen</strong></p>
+                        <p>Bipartisan support for REPO Act allowing seizure and transfer of Russian sovereign assets.
+                        </p>
+                    </div>
+                    <div class="branch-card">
+                        <h3>🇬🇧 United Kingdom</h3>
+                        <p><strong>€26 billion frozen</strong></p>
+                        <p>Active legislation development for asset seizure and reconstruction fund allocation.</p>
+                    </div>
+                    <div class="branch-card">
+                        <h3>🇯🇵 Japan</h3>
+                        <p><strong>€8 billion frozen</strong></p>
+                        <p>Coordinated sanctions and asset freezes in alignment with G7 partners.</p>
+                    </div>
+                    <div class="branch-card">
+                        <h3>🇨🇦 Canada</h3>
+                        <p><strong>€4 billion frozen</strong></p>
+                        <p>First country to pass legislation authorizing use of frozen assets for reconstruction.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Timeline -->
+            <div class="infographic-slide">
+                <h3 class="slide-title">Key Milestones Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">February 2022</div>
+                            <p>Initial sanctions and asset freezes implemented following Russian invasion of Ukraine.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">March 2022</div>
+                            <p>G7 nations coordinate comprehensive freezing of Russian Central Bank reserves.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">December 2022</div>
+                            <p>Canada passes first legislation authorizing seizure of frozen Russian assets.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">May 2024</div>
+                            <p>G7 agrees on framework to utilize windfall profits from frozen assets.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">December 2024</div>
+                            <p>EU approves first tranche of €1.5 billion from windfall profits for Ukraine
+                                reconstruction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Legal Framework -->
+            <div class="infographic-slide">
+                <h3 class="slide-title">Legal & Policy Framework</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">📋</div>
+                        <div class="stat-label">International Law Compliance</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">⚖️</div>
+                        <div class="stat-label">Countermeasures Doctrine</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">🤝</div>
+                        <div class="stat-label">Multi-lateral Coordination</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">🛡️</div>
+                        <div class="stat-label">Asset Protection Measures</div>
+                    </div>
+                </div>
+                <p style="margin-top: 2rem; font-size: 1.1rem;">
+                    The legal framework for utilizing frozen Russian assets is built on principles of international law,
+                    state responsibility, and the doctrine of countermeasures in response to internationally wrongful
+                    acts.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Database Section -->
+    <section id="database" class="database-section">
+        <h2 class="section-title">Document & Resource Database</h2>
+
+        <div class="database-container">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search documents, legislation, opinions..." id="searchInput">
+                <button onclick="performSearch()">Search</button>
+            </div>
+
+            <!-- Category Navigation -->
+            <div class="category-nav">
+                <div class="category-card" onclick="filterCategory('legal')">
+                    <div class="category-icon">⚖️</div>
+                    <h3>Legal Documents</h3>
+                    <p>127 documents</p>
+                </div>
+                <div class="category-card" onclick="filterCategory('financial')">
+                    <div class="category-icon">💰</div>
+                    <h3>Financial Reports</h3>
+                    <p>89 documents</p>
+                </div>
+                <div class="category-card" onclick="filterCategory('political')">
+                    <div class="category-icon">🏛️</div>
+                    <h3>Political Statements</h3>
+                    <p>156 documents</p>
+                </div>
+                <div class="category-card" onclick="filterCategory('opinion')">
+                    <div class="category-icon">💭</div>
+                    <h3>Expert Opinions</h3>
+                    <p>203 documents</p>
+                </div>
+                <div class="category-card" onclick="filterCategory('news')">
+                    <div class="category-icon">📰</div>
+                    <h3>News & Media</h3>
+                    <p>342 articles</p>
+                </div>
+                <div class="category-card" onclick="filterCategory('research')">
+                    <div class="category-icon">🔬</div>
+                    <h3>Academic Research</h3>
+                    <p>78 papers</p>
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <div class="filter-tab active" onclick="filterType('all')">All Documents</div>
+                <div class="filter-tab" onclick="filterType('legal')">Legal</div>
+                <div class="filter-tab" onclick="filterType('financial')">Financial</div>
+                <div class="filter-tab" onclick="filterType('political')">Political</div>
+                <div class="filter-tab" onclick="filterType('opinion')">Opinion</div>
+                <div class="filter-tab" onclick="filterType('2024')">2024</div>
+                <div class="filter-tab" onclick="filterType('2023')">2023</div>
+            </div>
+
+            <!-- Documents Grid -->
+            <div class="documents-grid" id="documentsGrid">
+                <!-- Legal Documents -->
+                <div class="document-card" data-category="legal">
+                    <span class="document-type">Legal</span>
+                    <div class="document-title">EU Council Decision on Windfall Profits</div>
+                    <div class="document-meta">European Union • December 2024</div>
+                    <p>Council Decision establishing framework for utilizing windfall profits from immobilized Russian
+                        assets for Ukraine reconstruction.</p>
+                    <a href="#" class="document-link">View Document →</a>
+                </div>
+
+                <div class="document-card" data-category="legal">
+                    <span class="document-type">Legal</span>
+                    <div class="document-title">REPO Act - US Legislation</div>
+                    <div class="document-meta">United States Congress • April 2024</div>
+                    <p>Rebuilding Economic Prosperity and Opportunity for Ukrainians Act authorizing seizure of Russian
+                        sovereign assets.</p>
+                    <a href="#" class="document-link">View Document →</a>
+                </div>
+
+                <div class="document-card" data-category="financial">
+                    <span class="document-type">Financial</span>
+                    <div class="document-title">Euroclear Annual Report on Frozen Assets</div>
+                    <div class="document-meta">Euroclear • October 2024</div>
+                    <p>Comprehensive report on the management and windfall profits generated from €197 billion in frozen
+                        Russian assets.</p>
+                    <a href="#" class="document-link">View Document →</a>
+                </div>
+
+                <div class="document-card" data-category="political">
+                    <span class="document-type">Political</span>
+                    <div class="document-title">G7 Joint Statement on Russian Assets</div>
+                    <div class="document-meta">G7 Summit • May 2024</div>
+                    <p>Leaders' commitment to explore legal pathways for utilizing frozen Russian assets for Ukraine's
+                        benefit.</p>
+                    <a href="#" class="document-link">View Document →</a>
+                </div>
+
+                <div class="document-card" data-category="opinion">
+                    <span class="document-type">Expert Opinion</span>
+                    <div class="document-title">Legal Basis for Asset Seizure</div>
+                    <div class="document-meta">International Law Association • September 2024</div>
+                    <p>Analysis of international law principles supporting the seizure and utilization of Russian state
+                        assets.</p>
+                    <a href="#" class="document-link">View Document →</a>
+                </div>
+
+                <div class="document-card" data-category="legal">
+                    <span class="document-type">Legal</span>
+                    <div class="document-title">Canadian Asset Seizure Legislation</div>
+                    <div class="document-meta">Parliament of Canada • December 2022</div>
+                    <p>Groundbreaking legislation allowing for the seizure and repurposing of sanctioned Russian assets.
+                    </p>
+                    <a href="#" class="document-link">View Document →</a>
+                </div>
+
+                <div class="document-card" data-category="financial">
+                    <span class="document-type">Financial</span>
+                    <div class="document-title">World Bank Ukraine Reconstruction Assessment</div>
+                    <div class="document-meta">World Bank • March 2024</div>
+                    <p>Estimated reconstruction costs of €486 billion and potential funding sources including frozen
+                        assets.</p>
+                    <a href="#" class="document-link">View Document →</a>
+                </div>
+
+                <div class="document-card" data-category="opinion">
+                    <span class="document-type">Expert Opinion</span>
+                    <div class="document-title">Economic Impact Analysis</div>
+                    <div class="document-meta">Peterson Institute • August 2024</div>
+                    <p>Assessment of economic implications of utilizing Russian frozen assets for reconstruction
+                        funding.</p>
+                    <a href="#" class="document-link">View Document →</a>
+                </div>
+
+                <div class="document-card" data-category="political">
+                    <span class="document-type">Political</span>
+                    <div class="document-title">European Parliament Resolution</div>
+                    <div class="document-meta">European Parliament • November 2024</div>
+                    <p>Resolution calling for accelerated utilization of Russian assets for Ukraine's reconstruction
+                        efforts.</p>
+                    <a href="#" class="document-link">View Document →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="presentation-section">
+        <div class="infographic-container">
+            <div class="infographic-slide">
+                <h3 class="slide-title">About This Initiative</h3>
+                <p style="font-size: 1.2rem; line-height: 1.8;">
+                    This platform serves as a comprehensive resource for understanding and tracking the international
+                    effort to utilize frozen Russian assets for Ukraine's reconstruction. We aggregate legal documents,
+                    financial reports, political statements, and expert analyses to provide transparency and
+                    accessibility
+                    to this unprecedented initiative in international law and finance.
+                </p>
+                <p style="font-size: 1.2rem; line-height: 1.8; margin-top: 2rem;">
+                    Our mission is to promote informed discussion and facilitate research on the legal, financial, and
+                    political dimensions of frozen asset utilization for reconstruction purposes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#presentation">Overview</a>
+                <a href="#database">Database</a>
+                <a href="#about">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <p>&copy; 2024 Ukraine Reconstruction Fund Initiative. All rights reserved.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                This is an independent information resource and is not affiliated with any government entity.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Search functionality
+        function performSearch() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.document-card');
+
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Filter by category
+        function filterCategory(category) {
+            const cards = document.querySelectorAll('.document-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Filter by type
+        function filterType(type) {
+            const tabs = document.querySelectorAll('.filter-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.document-card');
+            cards.forEach(card => {
+                if (type === 'all') {
+                    card.style.display = 'block';
+                } else if (card.querySelector('.document-type').textContent.toLowerCase().includes(type.toLowerCase()) ||
+                    card.querySelector('.document-meta').textContent.includes(type)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Search on Enter key
+        document.getElementById('searchInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animation for stats
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.stat-card, .document-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

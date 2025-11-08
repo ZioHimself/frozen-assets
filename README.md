@@ -1,0 +1,37 @@
+# Ukraine Reconstruction Fund
+
+A comprehensive resource tracking the international effort to utilize frozen Russian assets for Ukraine's reconstruction.
+
+## Overview
+
+This platform serves two primary functions:
+
+1. **Interactive Presentation** – Visual infographics and data on frozen Russian assets and reconstruction funding
+2. **Document Database** – Aggregated repository of legal, financial, political, and expert documents related to asset seizure and utilization
+
+## Features
+
+- Real-time search and filtering across document categories
+- Timeline of key legislative and policy milestones
+- Regional asset distribution breakdowns
+- Categorized resource library (legal, financial, political, opinion, research, media)
+
+## Technology
+
+Static HTML/CSS/JavaScript website. No build process required.
+
+## Usage
+
+Open `index.html` in a web browser or deploy to any static hosting service.
+
+## Contributing
+
+Document submissions and corrections welcome. Please ensure all references include proper citations and dates.
+
+## License
+
+Content aggregated from public sources. See individual documents for their respective licenses.
+
+---
+
+*This is an independent information resource and is not affiliated with any government entity.*
