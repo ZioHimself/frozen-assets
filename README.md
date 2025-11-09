@@ -20,11 +20,20 @@ This platform serves two primary functions:
 
 Static HTML/CSS/JavaScript website. No build process required.
 
+### Data Source
+
+The document database is dynamically loaded from a Google Sheets spreadsheet via Google Apps Script API. This allows for easy content management without rebuilding the website.
+
+**Setup Required**: To connect your own Google Sheets data, follow the [Setup Guide](docs/SETUP.md).
+
 ## Usage
 
 The platform is currently available at: **https://ziohimself.github.io/frozen-assets/**
 
-For local development, open `index.html` in a web browser.
+For local development:
+1. Clone this repository
+2. Follow the [Setup Guide](docs/SETUP.md) to configure your Google Sheets API
+3. Open `docs/index.html` in a web browser
 
 *Note: Shortly, this will be hosted on a dedicated domain.*
 
