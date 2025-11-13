@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ukraine Reconstruction Fund - Russian Frozen Assets</title>
+    <title>Ukraine Reconstruction & Europe Security Fund - Russian Frozen Assets</title>
     <style>
         * {
             margin: 0;
@@ -512,8 +512,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Ukraine Reconstruction Fund</h1>
-            <p>Tracking Russian Frozen Assets for Rebuilding Ukraine</p>
+            <h1>Ukraine Reconstruction & European Security Fund</h1>
+            <p>Tracking Russian Frozen Assets for bolstering European Security & Rebuilding Ukraine</p>
             <a href="#presentation" class="cta-button">Explore the Data</a>
             <div class="scroll-indicator">
                 <span style="font-size: 2rem; color: white;">↓</span>
@@ -627,7 +627,7 @@
             </div>
 
             <!-- Slide 4: Legal Framework -->
-            <div class="infographic-slide">
+            <div class="infographic-slide" style="display: none;">
                 <h3 class="slide-title">Legal & Policy Framework</h3>
                 <div class="stats-grid">
                     <div class="stat-card">
@@ -729,14 +729,15 @@
                 <h3 class="slide-title">About This Initiative</h3>
                 <p style="font-size: 1.2rem; line-height: 1.8;">
                     This platform serves as a comprehensive resource for understanding and tracking the international
-                    effort to utilize frozen Russian assets for Ukraine's reconstruction. We aggregate legal documents,
+                    effort to utilize frozen Russian assets for European Security and Ukraine's reconstruction. We
+                    aggregate legal documents,
                     financial reports, political statements, and expert analyses to provide transparency and
                     accessibility
                     to this unprecedented initiative in international law and finance.
                 </p>
                 <p style="font-size: 1.2rem; line-height: 1.8; margin-top: 2rem;">
                     Our mission is to promote informed discussion and facilitate research on the legal, financial, and
-                    political dimensions of frozen asset utilization for reconstruction purposes.
+                    political dimensions of frozen asset utilization for security and reconstruction purposes.
                 </p>
             </div>
         </div>
@@ -892,7 +893,11 @@
                 }
 
                 // Filter out empty rows
-                documents = documents.filter(doc => doc.title && doc.title.trim() !== '');
+                documents = documents.filter(doc =>
+                    doc.title && doc.title.trim() !== '' &&
+                    doc.link && doc.link.trim() !== '' &&
+                    doc["type"] && doc["type"].trim() !== ''
+                );
 
                 allDocuments = documents;
 
