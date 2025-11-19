@@ -492,6 +492,65 @@
                 transform: translateX(-50%) translateY(-10px);
             }
         }
+
+        /* Loading Animation */
+        .loading-container {
+            text-align: center;
+            padding: 3rem;
+            grid-column: 1/-1;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--light-gray);
+            border-top: 5px solid var(--primary-blue);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading-text {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+        }
+
+        /* Skeleton Loader */
+        .skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 12px;
+            display: inline-block;
+            height: 20px;
+            width: 80px;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        .category-card .skeleton {
+            margin-top: 0.5rem;
+        }
     </style>
 </head>
 
@@ -673,32 +732,32 @@
                 <div class="category-card" onclick="filterCategory('legal')">
                     <div class="category-icon">⚖️</div>
                     <h3>Legal Documents</h3>
-                    <p id="count-legal">0 documents</p>
+                    <p id="count-legal"><span class="skeleton"></span></p>
                 </div>
                 <div class="category-card" onclick="filterCategory('financial')">
                     <div class="category-icon">💰</div>
                     <h3>Financial Reports</h3>
-                    <p id="count-financial">0 documents</p>
+                    <p id="count-financial"><span class="skeleton"></span></p>
                 </div>
                 <div class="category-card" onclick="filterCategory('political')">
                     <div class="category-icon">🏛️</div>
                     <h3>Political Statements</h3>
-                    <p id="count-political">0 documents</p>
+                    <p id="count-political"><span class="skeleton"></span></p>
                 </div>
                 <div class="category-card" onclick="filterCategory('opinion')">
                     <div class="category-icon">💭</div>
                     <h3>Expert Opinions</h3>
-                    <p id="count-opinion">0 documents</p>
+                    <p id="count-opinion"><span class="skeleton"></span></p>
                 </div>
                 <div class="category-card" onclick="filterCategory('news')">
                     <div class="category-icon">📰</div>
                     <h3>News & Media</h3>
-                    <p id="count-news">0 articles</p>
+                    <p id="count-news"><span class="skeleton"></span></p>
                 </div>
                 <div class="category-card" onclick="filterCategory('research')">
                     <div class="category-icon">🔬</div>
                     <h3>Academic Research</h3>
-                    <p id="count-research">0 papers</p>
+                    <p id="count-research"><span class="skeleton"></span></p>
                 </div>
             </div>
 
@@ -716,8 +775,9 @@
             <!-- Documents Grid -->
             <div class="documents-grid" id="documentsGrid">
                 <!-- Documents will be loaded dynamically from Google Sheets -->
-                <div style="text-align: center; padding: 3rem; grid-column: 1/-1;">
-                    <p style="font-size: 1.2rem; color: var(--text-light);">Loading documents...</p>
+                <div class="loading-container">
+                    <div class="loading-spinner"></div>
+                    <p class="loading-text">Loading documents...</p>
                 </div>
             </div>
         </div>
@@ -779,6 +839,8 @@
 
         // Store all documents data
         let allDocuments = [];
+        let documentsLoaded = false;
+        let documentsLoading = false;
 
         // Fallback data in case API is not available
         const FALLBACK_DATA = [
@@ -884,6 +946,12 @@
 
         // Load and display documents
         async function loadDocuments() {
+            if (documentsLoaded || documentsLoading) {
+                return; // Prevent multiple simultaneous loads
+            }
+
+            documentsLoading = true;
+
             try {
                 let documents;
 
@@ -908,11 +976,12 @@
                 );
 
                 allDocuments = documents;
+                documentsLoaded = true;
 
                 const grid = document.getElementById('documentsGrid');
                 if (documents.length === 0) {
                     grid.innerHTML = `
-                        <div style="text-align: center; padding: 3rem; grid-column: 1/-1;">
+                        <div class="loading-container">
                             <p style="font-size: 1.2rem; color: var(--text-light);">
                                 No documents found. Please check your data source.
                             </p>
@@ -934,7 +1003,7 @@
                 console.error('Error loading documents:', error);
                 const grid = document.getElementById('documentsGrid');
                 grid.innerHTML = `
-                    <div style="text-align: center; padding: 3rem; grid-column: 1/-1;">
+                    <div class="loading-container">
                         <p style="font-size: 1.2rem; color: var(--text-light);">
                             Unable to load documents. ${USE_FALLBACK ? 'Using fallback data.' : 'Please check the API URL.'}
                         </p>
@@ -943,6 +1012,8 @@
                         </p>
                     </div>
                 `;
+            } finally {
+                documentsLoading = false;
             }
         }
 
@@ -1009,9 +1080,28 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+
+                    // If navigating to database section, ensure documents are loaded
+                    if (this.getAttribute('href') === '#database' && !documentsLoaded && !documentsLoading) {
+                        loadDocuments();
+                    }
                 }
             });
         });
+
+        // Observe database section to load documents when it comes into view
+        const databaseSection = document.getElementById('database');
+        const databaseObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !documentsLoaded && !documentsLoading) {
+                    loadDocuments();
+                }
+            });
+        }, { threshold: 0.1 });
+
+        if (databaseSection) {
+            databaseObserver.observe(databaseSection);
+        }
 
         // Add scroll animation for stats
         const observerOptions = {
@@ -1030,8 +1120,7 @@
             observer.observe(el);
         });
 
-        // Load documents when page loads
-        window.addEventListener('DOMContentLoaded', loadDocuments);
+        // Remove auto-load on DOMContentLoaded - documents now load lazily when database section is viewed
     </script>
 </body>
 
