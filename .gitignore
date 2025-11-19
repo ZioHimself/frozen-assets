@@ -225,3 +225,5 @@ credentials.json
 
 # Custom - Add your project-specific ignores below
 # ---------------------------------------------------
+
+scripts/knowledge_base/
