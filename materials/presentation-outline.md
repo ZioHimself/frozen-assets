@@ -4,117 +4,204 @@
 
 This presentation responds to Belgian Prime Minister Bart De Wever's concerns about using frozen Russian assets for Ukraine. It is designed for a general audience (journalists, policymakers, civil society) and structured to work alongside your document database at frozen-assets.eu.
 
-**Core Strategy**: Move from defensive (answering concerns) to offensive (making the positive case) while maintaining credibility through evidence-based argumentation.
+**Core Strategy**: **Front-load the knockout arguments.** Since most web visitors will only read the first 5 slides, these deliver the most compelling counter-arguments with maximum informational density. Later slides provide technical depth for those who want complete documentation.
+
+**Structure**:
+- **Slides 1-5**: The Core Case (highest impact, designed for maximum readership)
+  - Establishes Belgium is already paying concrete costs NOW
+  - Exposes the logical contradiction in De Wever's position
+  - Systematically answers all three core objections
+  - Proves EU already took greater risks for lesser objectives
+  
+- **Slides 6-21**: Technical Support & Additional Arguments (for detailed analysis)
+  
+- **Slides 22-24**: Call to Action (for those ready to act)
 
 ---
 
-## SLIDE 1: Title Slide
+## SLIDE 1: Title Slide - The Choice Belgium Faces
 **Title**: "Belgium's Choice: Lead Europe or Return Money to Its Aggressor?"
-**Subtitle**: Responding to Prime Minister De Wever's Concerns on Russian Frozen Assets
+**Subtitle**: Why Prime Minister De Wever's Concerns Don't Hold Up
 
-**Visual**: Split-screen image
-- Left: Belgian flag/landmark with Ukrainian flag
-- Right: Russian drone over Belgian infrastructure (or similar threat imagery)
+**Visual**: Powerful split image
+- Left: Russian drones over Doel nuclear plant / Belgian airports
+- Right: €140 billion that could fund Ukraine's defense
 
-**Note**: Sets up the binary choice framework - not about risk vs. safety, but about which risk Belgium chooses.
+**Opening Text**: 
+"Prime Minister De Wever says using frozen Russian assets is 'too risky.' But Belgium is already paying the price of inaction. Every day of delay costs more."
 
----
-
-## SLIDE 2: Context - The Urgent Question
-**Headline**: "The December Decision"
-
-**Key Points**:
-- €140 billion in Russian Central Bank assets frozen in Europe (majority in Euroclear, Belgium)
-- Ukraine faces €135 billion financing gap for 2026-2027
-- European Council decision needed by December 2025
-- Prime Minister De Wever raised concerns at October Council meeting
-
-**Visual**: Timeline graphic showing urgency
-**Supporting Documents**: EU Council conclusions, Commission letter on options
-
-**Note**: Establishes stakes and timeframe without editorializing.
+**Note**: Immediately frames the debate - it's not safety vs. risk, it's choosing between risks. Sets confrontational but evidence-based tone.
 
 ---
 
-## SLIDE 3: De Wever's Three Core Concerns
-**Headline**: "Three Problems Must Be Solved"
+## SLIDE 2: The Uncomfortable Truth De Wever Won't Address
+**Headline**: "Belgium Is Already Under Attack - RIGHT NOW"
 
-De Wever has focused on three "essential" concerns (down from 10 in Copenhagen):
+**Since October 2024, Russian drones have violated Belgian airspace:**
+- ✈️ Brussels, Charleroi, Liège airports → **operations halted**
+- 🎖️ Belgian military bases and Royal Military School
+- 🏭 Port of Antwerp - Europe's second-largest port
+- ☢️ **Doel nuclear power plant** - five drones spotted
+- 💰 **Cost: €2+ million per airport incident** (direct costs only)
 
-1. **Legal Uncertainty**: "Is this even legal? Nobody has done this before."
-2. **Liquidity Guarantees**: "Cash must be available immediately if Russia wins a claim."
-3. **Belgian Burden**: "Taking Putin's money and leaving the risks with us - that's not happening."
+**The Pattern Across Europe:**
+- 14+ EU member states experiencing Russian hybrid warfare
+- Billions lost to sabotage (energy, transport, banking, infrastructure)
+- Von der Leyen's plane lost GPS signal over Bulgaria
+- Poland invoked NATO Article 4 after 21 drones entered airspace
 
-**Visual**: Three pillars/columns graphic
-**Quote**: "If we find solutions for these three problems then maybe we can go ahead. If not, maybe another option." - Bart De Wever
+**The Question De Wever Won't Answer:**
+"Do we fear *theoretical* litigation more than the *documented* cost of Russian aggression happening now?"
 
-**Note**: Uses De Wever's own framing to show we're engaging seriously with his concerns.
+**Visual**: Map of Belgium with drone incident markers + cost ticker
+**Supporting Documents**: IISS Russian sabotage scale report, Belgian news sources, NATO Article 4 consultation
+
+**Note**: THIS is the emotional hook - make it visceral that Belgium is already paying. Front-loads the cost-benefit reality.
 
 ---
 
-## SECTION DIVIDER: "Let's Examine the Facts"
+## SLIDE 3: De Wever's Impossible Logic
+**Headline**: "He Blocks Every Solution While Claiming to Support Ukraine"
+
+**De Wever simultaneously claims:**
+
+| What He Says | The Evidence |
+|--------------|--------------|
+| ✓ "Ukraine needs urgent funding - before end of year" | **TRUE** - €135bn gap for 2026-2027 |
+| ✗ "Russian assets too risky to use" | **BUT** blocks the Reparations Loan |
+| ✗ "Coalition should fund it directly instead" | **BUT** admits: "Phone calls received: zero. Actually zero." |
+| ✗ "EU debt better alternative" | **BUT** requires unanimity (Hungary veto) |
+| ✓ "I'm ready, willing, able to do whatever it takes" | **SO... WHAT EXACTLY?** |
+
+**The Logical Trap:**
+If Ukraine truly needs urgent funding (✓) AND all alternatives are blocked (✗✗✗), THEN being "ready, willing, able" requires accepting the only viable option: **the Reparations Loan**.
+
+**These positions cannot all be true. De Wever is blocking all solutions while claiming to seek one.**
+
+**Visual**: Logic flow diagram showing the contradiction
+**Quote**: "Number of phone calls I got since proposing [coalition funding]: tends to zero. It actually is zero." - Bart De Wever
+
+**Note**: This is the intellectual knockout - exposes that his position guarantees inaction regardless of rhetoric.
 
 ---
 
-## SLIDE 4: Concern #1 - "Is This Legal?"
-**Headline**: De Wever's Claim vs. Legal Reality
+## SLIDE 4: De Wever's Three "Problems" - Already Solved
+**Headline**: "Every Concern Has an Answer He's Ignoring"
 
-**De Wever Says**:
-- "Nobody has ever done this before - we're in uncharted waters"
-- "Even during WWII, central bank money was not touched"
-- "Japan decided central bank money is immune"
+### Problem 1: "Is this even legal?"
+
+**De Wever claims**: "Nobody has done this before - we're in uncharted waters"
 
 **The Reality**:
-✓ **Legal basis exists**: International law experts confirm countermeasures are legitimate under ARSIWA (Articles on State Responsibility)
-✓ **Historical precedents exist**: Iraq-Kuwait ($50bn), plus seizures from Iran, Argentina, Yugoslavia, Libya, Germany, Japan, Italy
-✓ **Belgium benefited from this principle**: Received reparations after both WWI and WWII
+- ✓ **Legal framework exists**: ARSIWA (Articles on State Responsibility) - countermeasures are lawful when aggressor violates international law
+- ✓ **Historical precedents**: Iraq-Kuwait ($50bn), Iran, Argentina, Yugoslavia, Libya, Germany, Japan, Italy
+- ✓ **Belgium itself benefited**: Received war reparations after WWI and WWII
+- ✓ **It's not even confiscation**: Reparations Loan uses assets as **collateral**, not consumption
 
-**Visual**: Timeline of historical precedents
-**Supporting Documents**: EPRS legal analysis, IISS countermeasures study, ARSIWA articles
+### Problem 2: "Guarantees - cash must be available immediately"
 
-**Note**: Directly contradicts "unprecedented" claim with evidence.
+**De Wever claims**: "If Russia wins a claim, money must return instantly or markets panic"
+
+**The Reality**:
+- ✓ **ECB President Lagarde said "CAN be done"** with conditions (not "cannot be done")
+- ✓ **Loan structure preserves assets**: They're replaced with EU bonds, not spent
+- ✓ **Russia claiming return takes YEARS**: Requires (1) ending aggression, (2) winning arbitration, or (3) favorable peace treaty
+- ✓ **Guarantee mechanisms exist**: Phased, conditional, insured structures
+
+### Problem 3: "Risks left with Belgium"
+
+**De Wever claims**: "Taking Putin's money and leaving risks with us"
+
+**The Reality**:
+- ✓ **Investment tribunal victory extremely unlikely**: CBR chances "extremely low" per legal analysis
+- ✓ **EU already blocks enforcement**: 15th sanctions package prohibits recognition of arbitral awards
+- ✓ **EU took GREATER risks for LESS**: Used Russian private assets to compensate investors (higher legal risk) - Ukraine's survival warrants equal tolerance
+- ✓ **Multi-country participation exists**: G7 already using windfall profits; burden-sharing mechanisms available
+
+**The Bottom Line**: De Wever presents "problems" while ignoring that solutions exist. The question isn't whether answers exist - **they do**. The question is whether Belgium will lead or obstruct.
+
+**Visual**: Three-column table with problem / claim / solution
+**Supporting Documents**: ARSIWA framework, IISS countermeasures analysis, EU legal options study, Commission reparations loan proposal, EU sanctions packages
+
+**Note**: This slide does heavy lifting - systematically demolishes all three core objections with evidence.
 
 ---
 
-## SLIDE 5: What Makes It Legal?
-**Headline**: The Legal Framework for Countermeasures
+## SLIDE 5: What Belgium Refuses to See
+**Headline**: "The EU Already Did This for Private Investors - Why Not for Ukraine?"
 
-**When a state commits serious wrongdoing (like Russia's aggression), international law allows countermeasures:**
+**What Happened in December 2024 & July 2025:**
 
-1. **Temporary suspension** of certain obligations toward the aggressor state
-2. **Proportional response** to force compliance with international law
-3. **Legitimate until** aggressor ends violation and pays reparations
+Belgium, Euroclear, and the EU took **much greater legal risks** to protect European investors:
+
+| Action | What They Did | Legal Risk Level |
+|--------|---------------|------------------|
+| **Dec 2024** | Used cash from Russian National Securities Depository to compensate European investors | **HIGHER RISK** |
+| **July 2025** | Blocked enforcement of arbitral awards related to these actions | **Novel legal territory** |
+
+**Why Private Investor Action Was RISKIER:**
+1. Russian individuals/companies can invoke human rights protection (CBR cannot - it's 100% governmental)
+2. Connection to aggression less obvious than Central Bank's direct role
+3. Created precedent for using Russian assets anyway
+
+**The Comparison:**
+
+```
+Private European Investors   →  HIGHER legal risk  →  EU acted decisively
+Ukraine's Survival           →  LOWER legal risk   →  Belgium blocks it
+```
+
+**The Question for Belgium:**
+"If the EU can accept greater legal uncertainty to protect private investors' portfolios, why can't it accept lesser risk to ensure Ukraine's survival and Europe's security?"
+
+**Belgium's Choice Revealed:**
+This isn't about legal risk. **Belgium already demonstrated it can manage legal risk when it wants to.** This is about political will.
+
+**Visual**: Side-by-side comparison table showing risk levels
+**Supporting Documents**: EU CFSP decisions Dec 2024, Council decisions July 2025, legal analysis of private vs. state assets
+
+**Quote**: "When protecting investors of EU depositories... Belgium, Euroclear, and the EU demonstrated remarkable flexibility and willingness to take risks, even in legally questionable circumstances." - de-wever-argumentation.v2.md
+
+**Note**: This is the credibility killer - proves Belgium's risk-aversion argument is selective and pretextual.
+
+---
+
+## SECTION DIVIDER: "The Details Behind the Arguments"
+
+**Note to viewer**: The first 5 slides present the core case. What follows provides deeper technical support, additional context, and responds to secondary arguments. If you're convinced, jump to **Slide 22 for actions you can take**. If you want the full technical case, continue reading.
+
+---
+
+## SLIDE 6: Deep Dive - The Legal Framework
+**Headline**: ARSIWA and the Doctrine of Countermeasures
+
+**For those wanting legal details:**
+
+**ARSIWA (Articles on Responsibility of States for Internationally Wrongful Acts)**:
+- Codified customary international law
+- When state commits serious wrongdoing, other states may take countermeasures
+- Requirements: (1) Proportional, (2) Temporary, (3) Aim to force compliance
+
+**Russia's Violations**:
+- Aggression (jus ad bellum violation)
+- War crimes (peremptory norms)
+- Refusal to pay compensation
+- Seizure of Western assets in Russia
+
+**Why This Qualifies**:
+- Proportional: ~€300bn vs. €486bn+ reconstruction costs
+- Temporary: Until Russia complies and pays reparations  
+- Legitimate aim: Force Russia to end aggression and compensate
 
 **Key Principle**: *Ex iniuria ius non oritur* - "Law does not arise from wrongdoing"
-- Russia cannot claim legal protection for assets while violating fundamental international law
 
-**The Proposal**: Not even full confiscation - assets serve as **collateral** for reparations loan Ukraine repays only after receiving compensation from Russia
-
-**Visual**: Flow chart showing legal logic
-**Supporting Documents**: EPRS legal options study, IISS countermeasures analysis
+**Visual**: Legal framework flowchart
+**Supporting Documents**: ARSIWA text, IISS legal analysis, EPRS study
 
 ---
 
-## SLIDE 6: Concern #2 - "Liquidity Guarantee"
-**Headline**: De Wever's Claim vs. Financial Reality
-
-**De Wever Says**:
-- "Christine Lagarde confirmed cash must be guaranteed and immediately available"
-- "If sanctions fall or courts rule, money must return instantly or markets lose trust"
-- "This is probably the most important problem"
-
-**The Reality**:
-✓ **Lagarde said "can be done"** with conditions - not "cannot be done"
-✓ **Reparations Loan structure** means assets aren't "spent" - they're replaced with Commission bonds
-✓ **Russia claiming return requires**: (1) ending aggression, (2) complying with international law, (3) winning arbitration, or (4) favorable peace treaty - **none are rapid processes**
-
-**Visual**: Comparison chart - "What De Wever Implies" vs. "Actual Loan Structure"
-**Supporting Documents**: Commission proposal on reparations loan, von der Leyen's letter on options
-
----
-
-## SLIDE 7: How the Reparations Loan Actually Works
-**Headline**: Not Confiscation - Collateralization
+## SLIDE 7: Deep Dive - How the Reparations Loan Works
+**Headline**: Technical Mechanism Explained
 
 **Current Situation**:
 - €140bn Russian assets → Euroclear → cash at ECB
@@ -128,139 +215,108 @@ De Wever has focused on three "essential" concerns (down from 10 in Copenhagen):
 
 **Key Point**: This is a **loan structure**, not consumption of assets
 
+**Comparison to G7 Loan**:
+- G7 loan: Uses only windfall profits (~€3bn/year interest)
+- Reparations Loan: Uses full principal as collateral for much larger amounts
+
 **Visual**: Infographic comparing current use vs. proposed structure
-**Supporting Documents**: Commission technical analysis, Reparations Loan brief
+**Supporting Documents**: Commission technical analysis, Reparations Loan brief, von der Leyen options letter
 
 ---
 
-## SLIDE 8: Concern #3 - "Belgian Burden"
-**Headline**: De Wever's Claim vs. Strategic Reality
+## SLIDE 8: Deep Dive - Historical Precedents
+**Headline**: "Nobody Has Done This Before" - Really?
 
-**De Wever Says**:
-- "Belgium holds the biggest chicken - the fattest chicken is in Belgium"
-- "We're the only ones doing anything - others provide no transparency"
-- "It's a bit sour we're fingerpointed as the unwilling country"
-- "We're the best boy in town!"
+**Major Historical Cases of Sovereign Asset Use:**
 
-**The Reality**:
-✓ Belgium's position is a **leadership opportunity**, not victimhood
-✓ By leading, Belgium can **shape how the mechanism works**
-✓ **Belgium's historical role**: Led in building European institutions; received reparations after both World Wars
-✓ **The alternative**: Return money to an aggressor already conducting drone warfare over Belgian territory
+| Case | Year | Amount | Mechanism | Outcome |
+|------|------|--------|-----------|---------|
+| **Iraq → Kuwait** | 1991 | $50 billion | UN Compensation Commission | Assets used for reconstruction |
+| **Germany & Japan** | 1945-1952 | Extensive | Allied reparations programs | Post-war reconstruction funded |
+| **Italy assets** | 1954 | Significant | ICJ case, assets used | Reparations paid |
+| **Argentina** | 2000s | Various | Court-ordered seizures | Sovereign debt disputes |
+| **Iran** | 2016 | $1.75bn | US court orders | Terror victim compensation |
 
-**Visual**: Map showing Belgian leadership in European history
-**Quote**: "Belgium has a chance to play a pivotal role in European security. Will it lead the way?"
+**Belgium's Own History**:
+- **Post-WWI**: Received substantial reparations from Germany under Treaty of Versailles
+- **Post-WWII**: Benefited from Allied reparations program
+- Belgium was rebuilt with international assistance and German reparations
 
----
+**The Irony**: 
+Belgium benefited from the same principle it now questions. Will it deny Ukraine the justice Belgium itself received?
 
-## SLIDE 9: The Cost Belgium Is Already Paying
-**Headline**: Russia's Hybrid War Against Belgium - NOW
-
-**Since October 2024, Russian drones have been spotted over**:
-- Brussels, Charleroi, Liège airports → **operations halted**
-- Belgian military bases
-- Royal Military School
-- Port of Antwerp
-- **Doel nuclear power plant**
-
-**Economic Impact**:
-- **€2+ million per airport disruption incident** (direct costs only)
-- Billions in sabotage across Europe (energy, transport, banking, infrastructure)
-- **Pattern across 14+ EU member states**
-
-**The Question**: Do we fear the theoretical cost of litigation more than the documented cost of ongoing Russian aggression?
-
-**Visual**: Map of drone incidents across Belgium + cost estimates
-**Supporting Documents**: IISS report on Russian sabotage scale, news reports on incidents
+**Visual**: Timeline of asset seizures/reparations through history
+**Supporting Documents**: Historical treaties, UN Compensation Commission reports, ICJ decisions
 
 ---
 
-## SECTION DIVIDER: "Three More Arguments to Address"
+## SECTION DIVIDER: "Addressing Additional Arguments"
 
 ---
 
-## SLIDE 10: "What About Litigation Risk?"
-**Headline**: De Wever's Worst-Case Scenario vs. Actual Legal Analysis
+## SLIDE 9: Deep Dive - Investment Tribunal Risk Analysis
+**Headline**: Detailed Legal Probability Assessment
 
-**De Wever Says**:
-- "Buried in litigation - seems like a certainty"
-- "Consequences until eternity"
-- "Friedman claiming €16bn for €8bn frozen"
-- "If 180bn taken, claims could reach €360bn"
+**The Belgium-Luxembourg-USSR BIT (1989)**:
+- General language that *might* allow CBR to file as "investor" (uncertain)
+- But CBR is 100% governmental - not typical investor
 
-**The Reality**:
-✓ **Investment tribunal jurisdiction**: Uncertain if Russia's Central Bank even qualifies as "investor" under BIT
-✓ **Chance of Russia winning**: **Extremely low** based on case law analysis
-✓ **Why Russia would lose**: (1) Russia's violations of peremptory norms; (2) Russia already seized European assets; (3) Non-compensable expropriation doctrine applies
-✓ **EU already blocking enforcement**: 15th sanctions package prohibits recognition of arbitral awards related to these disputes
+**Why Russia Would Lose (Based on Case Law)**:
 
-**Key Point**: Friedman case involves **private assets** and different legal framework than CBR **state assets**
+1. **General International Law Takes Precedence**
+   - Investment tribunals follow ICJ approach: investment disputes can't be separated from general international law
+   - Russia's peremptory norm violations must be considered
 
-**Visual**: Flow chart - "Can Russia Win?" with probability assessments at each stage
-**Supporting Documents**: Legal analysis of BIT, tribunal case law review, EU sanctions packages
+2. **Countermeasures Doctrine Recognized**
+   - Tribunals accept: "host State is entitled to react to another State's breach by temporarily suspending protection of the latter's investors"
 
----
+3. **Non-Compensable Expropriation**
+   - Criteria: (a) legitimate public purpose, (b) non-discriminatory, (c) proportional, (d) good faith
+   - Using Russian assets meets all criteria
 
-## SLIDE 11: EU Already Took Greater Risks for Lesser Objectives
-**Headline**: Precedent: The EU Acted Boldly to Protect Private Investors
+4. **Russia's Own Actions**
+   - Already seized European assets (Total, Danone, Carlsberg)
+   - Cannot claim protection while violating same norms
 
-**What EU Already Did (Dec 2024, July 2025)**:
-- Used cash from Russian National Securities Depository to compensate European investors
-- **This created GREATER litigation risk** because: (1) Russian individuals/companies can invoke human rights; (2) Connection to aggression less obvious
-- EU then **blocked enforcement** of related arbitral awards
+5. **EU Blocking Enforcement**
+   - 15th sanctions package prohibits recognition of arbitral awards
+   - Russia cannot enforce judgment in EU even if it won
 
-**The Comparison**:
-| Action | Legal Risk | Objective |
-|--------|------------|-----------|
-| 2024-25 Actions | HIGHER | Protect private European investors |
-| Reparations Loan | LOWER | Support Ukraine's survival & European security |
+**Friedman Comparison**: Private oligarch assets ≠ Central Bank state assets. Different legal frameworks entirely.
 
-**Key Point**: EU already demonstrated it can manage litigation risk. Ukraine's survival warrants **at least** equal risk tolerance.
+**Probability Assessment**: Chance of Russia winning = **Extremely Low**
 
-**Visual**: Comparison table
-**Supporting Documents**: EU CFSP decisions Dec 2024, Council decisions July 2025
+**Visual**: Decision tree showing Russia's hurdles to victory
+**Supporting Documents**: BIT text, tribunal case law analysis, [De Wever Overstates Belgium's Risks](https://ukrainianvictory.org/publications/de-wever-overstates-belgium-s-risks-why-the-reparations-loan-is-crucial/)
 
 ---
 
-## SLIDE 12: "Can't Other Countries Pay Instead?"
-**Headline**: The "Coalition of the Bill" Argument
+## SLIDE 10: Secondary Arguments - Quick Rebuttals
+**Headline**: Other Objections and Their Answers
 
-**De Wever's Proposal**:
-- "Coalition of the willing should become coalition of the bill"
-- "€45 billion/year to keep Ukraine afloat - not a lot of money"
-- "Countries who are willing to pay could easily do so"
+### "Coalition should pay instead"
+**De Wever**: "€45bn/year - coalition of willing should become coalition of bill"
+**His own admission**: "Phone calls received: zero. It actually is zero."
+**Rebuttal**: Why propose dead alternative? Why should EU taxpayers pay for Russian aggression?
 
-**De Wever's Own Evidence This Won't Happen**:
-> "Number of phone calls I got since proposing this: tends to zero. It actually is zero." - Bart De Wever
+### "Spend euro once - save for reconstruction"  
+**De Wever**: "Use for war now = nothing left for reconstruction later"
+**Rebuttal**: (1) No reconstruction if Ukraine loses; (2) Loan structure preserves assets; (3) Russia owes €486bn+ regardless; (4) Protects assets while Ukraine loses = protecting nothing
 
-**The Reality**:
-✓ Major EU states face **budgetary constraints** (Germany, France, Poland)
-✓ Direct grants/debt **politically impossible** (requires unanimity - Hungary problem)
-✓ **Why should European taxpayers pay** for Russian aggression when Russian assets are available?
+### "Need non-Euro countries involved"
+**De Wever**: "Christine Lagarde recommended multi-country participation"
+**Rebuttal**: G7 already participating with windfall profits; Eurozone hosts majority of assets; leadership doesn't require unanimity; delay for global consensus sacrifices Ukraine's immediate needs
 
-**Visual**: Quote graphic of "zero phone calls" admission
-**Supporting Documents**: Budget constraint analysis, G7 discussions
+### "Sanctions renewal risk (Hungary veto)"
+**De Wever**: "If sanctions fall, 3 seconds later Russia claims money"
+**Rebuttal**: (1) 26-nation model working for 3 years; (2) Even if sanctions fell, Russia needs years to claim (peace treaty or arbitration); (3) Using assets makes sanctions MORE durable (higher stakes)
 
----
+### "EU debt alternative better"
+**De Wever**: "We did it for COVID"
+**Rebuttal**: Requires same unanimity (Hungary). Increases Member State debt. COVID was common European problem; Ukraine defense is Russian aggression problem - use aggressor's assets.
 
-## SLIDE 13: "What About Reconstruction After the War?"
-**Headline**: The "Spend Euro Once" Argument
-
-**De Wever Says**:
-- "You can only spend the euro once"
-- "If you use it all for war, reconstruction gets zero"
-- "It will be us again" having to pay
-
-**The Reality**:
-✓ **No reconstruction without winning first** - there's nothing to reconstruct if Ukraine loses
-✓ **Loan structure preserves assets** - they're collateral, not consumed
-✓ **Russia's liability exceeds frozen assets** - €300bn frozen vs. €486bn reconstruction costs (and rising daily)
-✓ **Alternative reconstruction financing** exists: Marshall Plan-style programs, World Bank, private investment
-
-**Key Point**: De Wever's logic inverts causality - protecting frozen assets for reconstruction while letting Ukraine lose the war guarantees there's nothing to reconstruct
-
-**Visual**: Timeline showing war → survival → reconstruction logic
-**Supporting Documents**: World Bank reconstruction assessment
+**Visual**: Quick-reference table
+**Note**: These are secondary because they either contradict De Wever's main arguments or he's admitted they won't work.
 
 ---
 
@@ -268,7 +324,7 @@ De Wever has focused on three "essential" concerns (down from 10 in Copenhagen):
 
 ---
 
-## SLIDE 14: Why the Reparations Loan Is the Best Option
+## SLIDE 11: Why the Reparations Loan Is the Best Option
 **Headline**: Three Options - One Clear Choice
 
 **Commission President von der Leyen outlined three options:**
@@ -290,7 +346,7 @@ De Wever has focused on three "essential" concerns (down from 10 in Copenhagen):
 
 ---
 
-## SLIDE 15: The Strategic Imperative
+## SLIDE 12: The Strategic Imperative
 **Headline**: What Happens If Europe Hesitates Again?
 
 **Historical Pattern**:
@@ -315,7 +371,7 @@ De Wever has focused on three "essential" concerns (down from 10 in Copenhagen):
 
 ---
 
-## SLIDE 16: What Message Does Europe Send?
+## SLIDE 13: What Message Does Europe Send?
 **Headline**: The Signal to the World
 
 **If Europe Returns the Money to Russia:**
@@ -339,7 +395,7 @@ De Wever has focused on three "essential" concerns (down from 10 in Copenhagen):
 
 ---
 
-## SLIDE 17: Belgium's Historical Moment
+## SLIDE 14: Belgium's Historical Moment
 **Headline**: A Chance to Lead Again
 
 **Belgium's Legacy**:
@@ -360,8 +416,8 @@ De Wever has focused on three "essential" concerns (down from 10 in Copenhagen):
 
 ---
 
-## SLIDE 18: Answering De Wever's "Three Problems"
-**Headline**: Solutions Exist for All Three Concerns
+## SLIDE 15: Summary - Solutions Exist for All Concerns
+**Headline**: Comprehensive Answer Matrix
 
 | Problem | De Wever's Concern | Solution That Exists |
 |---------|-------------------|---------------------|
@@ -375,49 +431,7 @@ De Wever has focused on three "essential" concerns (down from 10 in Copenhagen):
 
 ---
 
-## SLIDE 19: What About the Other Arguments?
-**Headline**: Quick Rebuttals to Secondary Concerns
-
-**"Need non-Euro country participation"**
-→ G7 already participating; leadership doesn't require unanimity; Eurozone hosts majority of assets
-
-**"Sanctions renewal vulnerability (Hungary)"**
-→ 26-member model working for 3 years; assets strengthen sanctions durability; extension mechanisms exist
-
-**"EU debt alternative better"**
-→ De Wever admits this requires unanimity (Hungary problem); increases Member State debt; why should European taxpayers pay for Russian aggression?
-
-**"Coalition should fund it directly"**
-→ De Wever admits "zero phone calls received" - this alternative is dead
-
-**Note**: These secondary arguments either contradict each other or contradict De Wever's primary concerns (show sophistication by not spending too much time here)
-
-**Visual**: Quick bullet-point format
-
----
-
-## SLIDE 20: The Fundamental Contradiction
-**Headline**: De Wever's Unsolvable Dilemma
-
-**De Wever simultaneously claims:**
-1. ✓ "Ukraine needs urgent funding - before end of year"
-2. ✗ "Russian assets too risky to use"
-3. ✗ "Direct funding from coalition won't happen" (zero calls)
-4. ✗ "Debt financing politically impossible" (unanimity problem)
-5. ✓ "I'm ready, willing, and able to do whatever it takes to help Ukraine"
-
-**These positions cannot all be true.**
-
-If Ukraine truly needs urgent funding (1) AND all alternatives are blocked (2-4), THEN being "ready, willing, able" (5) requires accepting manageable risks with the only viable option: the Reparations Loan.
-
-**The Choice**: Perfectionism that guarantees failure, or acceptable risk that enables Ukraine's survival?
-
-**Visual**: Logic flow showing contradiction
-**Note**: This is the presentation's intellectual climax - showing the argumentative trap
-
----
-
-## SLIDE 21: The Real Cost-Benefit Analysis
+## SLIDE 16: The Real Cost-Benefit Analysis
 **Headline**: What Are We Actually Comparing?
 
 **De Wever Focuses On (Speculative Future Risks)**:
@@ -439,7 +453,7 @@ If Ukraine truly needs urgent funding (1) AND all alternatives are blocked (2-4)
 
 ---
 
-## SLIDE 22: Call to Action - What Should Belgium Do?
+## SLIDE 17: Call to Action - What Should Belgium Do?
 **Headline**: December Decision Points
 
 **Belgium should:**
@@ -460,7 +474,7 @@ If Ukraine truly needs urgent funding (1) AND all alternatives are blocked (2-4)
 
 ---
 
-## SLIDE 23: What You Can Do
+## SLIDE 18: What You Can Do
 **Headline**: Join the Campaign
 
 **For Journalists:**
@@ -488,7 +502,7 @@ If Ukraine truly needs urgent funding (1) AND all alternatives are blocked (2-4)
 
 ---
 
-## SLIDE 24: Closing - Time to Choose
+## SLIDE 19: Closing - Belgium's Choice
 **Title**: "Belgium's Choice: Lead or Follow?"
 
 **Core Message**:
@@ -543,26 +557,51 @@ The question is: **Will Belgium use its leverage to shape European security, or 
 
 ## PRESENTATION DELIVERY NOTES
 
-**Tone**: Respectful but firm. Acknowledge De Wever's concerns are worth addressing, but show they have answers.
+**Tone**: Respectful but firm. Front-loaded with strongest counter-arguments since most viewers won't scroll past slide 5.
 
-**Pacing**: 
-- Slides 1-3: Set context (3-4 min)
-- Slides 4-13: Address concerns systematically (15-18 min)
-- Slides 14-20: Build positive case (10-12 min)
-- Slides 21-24: Call to action (5-7 min)
-- Total: ~35-40 min presentation + 20 min Q&A
+**Structure** (19 slides total + 6 appendix):
+- **Slides 1-5**: Core Case (MUST READ - highest impact)
+  - Slide 1: The choice Belgium faces
+  - Slide 2: Belgium already under attack NOW  
+  - Slide 3: De Wever's impossible logic
+  - Slide 4: All three problems already solved
+  - Slide 5: EU already took greater risks for less
+  
+- **Slides 6-10**: Technical Deep Dives (for those wanting details)
+  - Legal framework, loan mechanism, historical precedents, tribunal analysis, secondary rebuttals
+  
+- **Slides 11-16**: Positive Case (for building momentum)
+  - Why Reparations Loan wins, strategic imperative, messaging, Belgium's moment, solutions summary, cost-benefit
 
-**Key Moments for Emphasis**:
-- Slide 9: The cost Belgium is already paying (make it visceral)
-- Slide 20: The fundamental contradiction (intellectual turning point)
-- Slide 21: Real cost-benefit (emotional turning point)
-- Slide 24: Closing choice (moral clarity)
+- **Slides 17-19**: Call to Action (for mobilization)
+  - What Belgium should do, what you can do, closing choice
 
-**Adaptation Notes**:
-- For shorter presentations: Focus on Slides 1-3, 4-6, 9, 14-16, 20-21, 24
-- For academic audiences: Emphasize Slides 4-6, 10-11, Appendix A2
-- For political audiences: Emphasize Slides 8-9, 14-16, 20-22
-- For media: Emphasize Slides 9, 15-16, 20-21 (most newsworthy)
+**Key Moments for Maximum Impact**:
+- **Slide 2**: Belgium already paying (make it visceral - drones over nuclear plants)
+- **Slide 3**: The logical contradiction (intellectual knockout)
+- **Slide 5**: EU already did this for investors (credibility killer)
+- **Slide 16**: Real cost-benefit (concrete vs. speculative)
+- **Slide 19**: Final choice (moral clarity)
+
+**For Web Presentation**:
+- Assume 80% of visitors read only Slides 1-5
+- Assume 15% continue to Slides 6-10
+- Assume 5% read full presentation
+- Therefore: Maximum punch in first 5 slides
+
+**For Live Presentation** (~30 minutes):
+- Slides 1-5: 10-12 minutes (core case)
+- Slides 6-10: 5-7 minutes (selected technical support)
+- Slides 11-16: 8-10 minutes (positive case)
+- Slides 17-19: 5 minutes (call to action)
+- Q&A: 15-20 minutes (use appendix slides)
+
+**Adaptation for Audiences**:
+- **For journalists**: Emphasize Slides 2, 3, 5, 16 (most newsworthy - concrete costs, contradictions, hypocrisy)
+- **For policymakers**: Emphasize Slides 4, 6, 8, 15 (solutions exist, legal framework, precedents, comprehensive answers)
+- **For activists**: Emphasize Slides 1-5, 17-19 (core case + what to do)
+- **For academics**: Emphasize Slides 6, 8, 9, Appendix A2-A4 (legal/historical depth)
+- **For general public (shortest version)**: Slides 1, 2, 3, 5, 19 only (10 minutes)
 
 **Document References Throughout**:
 Every factual claim should hyperlink to source document in the knowledge base. This builds credibility and drives traffic to frozen-assets.eu.
