@@ -49,10 +49,17 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
             font-size: 1.5rem;
             font-weight: bold;
             color: var(--primary-blue);
-            text-decoration: none;
+        }
+
+        .logo img {
+            max-height: 38.4px;
+            height: auto;
+            width: auto;
         }
 
         .nav-links {
@@ -259,13 +266,15 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">🇺🇦 URF Initiative</a>
+            <div class="logo">
+                <img src="public/images/faa.favicon.blue.jpg" alt="Frozen Assets Action">
+                &nbsp;Frozen Assets Action
+            </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#presentation">Overview</a></li>
-                <li><a href="index.html#database">Database</a></li>
-                <li><a href="motivation.html">Motivation Article</a></li>
-                <li><a href="index.html#about">About</a></li>
+                <li><a href="#presentation">Arguments</a></li>
+                <li><a href="#database">Data</a></li>
+                <li><a href="motivation.html">Motivation</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </div>
     </nav>
@@ -439,12 +448,11 @@
         <div class="footer-content">
             <div class="footer-links">
                 <a href="index.html">Home</a>
-                <a href="index.html#presentation">Overview</a>
-                <a href="index.html#database">Database</a>
-                <a href="motivation.html">Motivation Article</a>
+                <a href="index.html#presentation">Arguments</a>
+                <a href="index.html#database">Data</a>
                 <a href="index.html#about">About</a>
             </div>
-            <p>2025 Ukraine Reconstruction Fund Initiative.</p>
+            <p>2025 Frozen Assets Action Initiative.</p>
             <p style="margin-top: 1rem; font-size: 0.9rem;">
                 This is an independent information resource and is not affiliated with any government entity.
             </p>
