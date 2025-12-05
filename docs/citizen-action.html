@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Action - Unblock the Reparation Loan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #005BBB;
+            --primary-yellow: #FFD500;
+            --dark-blue: #003366;
+            --light-gray: #f5f5f5;
+            --text-dark: #333;
+            --text-light: #666;
+            --action-red: #d32f2f;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .logo img {
+            max-height: 38.4px;
+            height: auto;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Article Container */
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .article-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .article-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        .article-meta {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .article-content {
+            font-size: 1.15rem;
+            line-height: 1.9;
+        }
+
+        .article-content h2 {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin: 2.5rem 0 1rem;
+            border-left: 5px solid var(--primary-yellow);
+            padding-left: 1rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--primary-blue);
+        }
+
+        .article-content a:hover {
+            border-bottom: 1px solid var(--primary-blue);
+        }
+
+        /* Override link styles for action buttons */
+        .article-content .action-button {
+            color: white;
+            border-bottom: none;
+        }
+
+        .article-content .action-button:hover {
+            border-bottom: none;
+        }
+
+        .article-content em {
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        .article-content strong {
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        /* Action Steps */
+        .action-step {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2.5rem 0;
+            border-left: 5px solid var(--primary-blue);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .action-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 91, 187, 0.15);
+        }
+
+        .action-step h2 {
+            color: var(--primary-blue);
+            margin: 0 0 1rem 0;
+            border: none;
+            padding: 0;
+            font-size: 1.6rem;
+        }
+
+        .action-step p {
+            margin-bottom: 1rem;
+        }
+
+        .action-step ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .action-step li {
+            margin-bottom: 0.5rem;
+        }
+
+        .action-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 2rem;
+            background: var(--primary-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+        }
+
+        .action-button:hover {
+            background: var(--dark-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 91, 187, 0.3);
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--action-red) 0%, #b71c1c 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(211, 47, 47, 0.3);
+        }
+
+        .cta-box h3 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .cta-box p {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .cta-box .event-details {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .cta-box .event-details p {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-box a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 1rem 2.5rem;
+            background: white;
+            color: var(--action-red);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .cta-box a:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-yellow);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 1.8rem;
+            }
+
+            .article-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .article-content {
+                font-size: 1.05rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .action-step {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="public/images/faa.favicon.blue.jpg" alt="Frozen Assets Action">
+                &nbsp;Frozen Assets Action
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#presentation">Arguments</a></li>
+                <li><a href="index.html#database">Data</a></li>
+                <li><a href="citizen-action.html">Take Action</a></li>
+                <li><a href="index.html#letter">Open Letter</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <div class="article-container">
+        <a href="index.html#action" class="back-link">← Back to Home</a>
+
+        <article>
+            <header class="article-header">
+                <h1 class="article-title">Take Action</h1>
+                <div class="article-subtitle">5 Steps to Help Unblock the Reparation Loan</div>
+                <div class="article-meta">December 2025</div>
+            </header>
+
+            <div class="article-content">
+                <p>Belgium's decision on the Reparation Loan will shape Europe's security for years to come. As a
+                    citizen,
+                    you have the power to influence this critical moment. Here are five concrete actions you can take to
+                    help Belgium show leadership and support Ukraine's defense against Russian aggression.</p>
+
+                <div class="action-step">
+                    <h2>1. 📱 Amplify the Message on Social Media</h2>
+                    <p>Make a post calling on Belgium to unblock the Reparation Loan and to put Ukrainian lives over
+                        profit.</p>
+                    <p><strong>How to do it:</strong></p>
+                    <ul>
+                        <li>Use the hashtags <strong>#MakeRussiaPay</strong> and <strong>#UnblockReparationLoan</strong>
+                        </li>
+                        <li>Tag Prime Minister Bart De Wever and MPs from the Belgian coalition parties to increase
+                            visibility</li>
+                        <li>Share facts from this website about why Belgium's leadership is crucial</li>
+                        <li>Amplify posts from others who are speaking out</li>
+                    </ul>
+                    <p><em>Why it matters:</em> Social media pressure creates visibility and shows decision-makers that
+                        citizens are paying attention.</p>
+                </div>
+
+                <div class="action-step">
+                    <h2>2. ✍️ Sign the Petition</h2>
+                    <p>Add your name to the petition addressed to the Prime Minister and the Belgian government urging
+                        them to unblock the reparation loan.</p>
+                    <p><strong>Every signature counts</strong> in demonstrating public support for using Russian frozen
+                        assets to support Ukraine's defense and eventual reconstruction.</p>
+                    <a href="https://www.petities.com/belgie_stop_sabotage_van_steun_aan_oekraine_-_belgique_arretez_le_sabotage_de_laide_a_lukraine_-_belgium_stop_sabotaging_support_for_ukraine?a=599410"
+                        target="_blank" class="action-button">Sign the Petition →</a>
+                </div>
+
+                <div class="action-step">
+                    <h2>3. 📧 Contact Belgian Decision-Makers</h2>
+                    <p>Write to a Member of the Belgian Parliament or directly to Prime Minister Bart De Wever, calling
+                        on them to show leadership for European and Belgian security and to support the approval of the
+                        reparation loan.</p>
+                    <p><strong>Key points to include:</strong></p>
+                    <ul>
+                        <li>Belgium is already paying the cost of Russian aggression (drone disruptions, sabotage)</li>
+                        <li>The Reparation Loan uses frozen Russian assets - not Belgian taxpayer money</li>
+                        <li>This is an opportunity for Belgium to lead Europe in defending our shared security</li>
+                        <li>Inaction will be more costly than action</li>
+                    </ul>
+                    <p><strong>For greater impact,</strong> publish your message on social media as well.</p>
+                    <p><em>Find contact information for Belgian MPs and government officials through official
+                            channels.</em></p>
+                </div>
+
+                <div class="action-step">
+                    <h2>4. 🏛️ Mobilise Civil Society Organizations</h2>
+                    <p>If you represent a Belgian civil society organization, sign our joint letter urging the
+                        government
+                        to unblock the loan.</p>
+                    <p>Civil society voices carry significant weight in policy debates. By joining forces with other
+                        organisations, you can amplify the call for Belgian leadership on this critical security issue.
+                    </p>
+                    <p><strong>Letter text:</strong> <a href="index.html#letter" target="_blank">View the full
+                            letter</a></p>
+                    <p><strong>To sign:</strong> Write to <a
+                            href="mailto:info@frozen-assets.eu">info@frozen-assets.eu</a></p>
+                </div>
+
+                <div class="action-step">
+                    <h2>5. 📣 Join the Protest on 12 December</h2>
+                    <p>Support the protest <strong>"Belgium, stop blocking the reparation loan. Ukrainian lives over
+                            profit!"</strong></p>
+                    <p>Your presence matters. Public demonstrations show the strength of citizen support and send a
+                        clear message to decision-makers that this issue cannot be ignored.</p>
+
+                    <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; margin: 1.5rem 0;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <img src="./public/images/make-russia-pay.jpeg"
+                                alt="Make Russia Pay - Join the Demonstration"
+                                style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                        </div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <div style="background: rgba(0, 91, 187, 0.1); padding: 1.5rem; border-radius: 10px;">
+                                <p><strong>📅 Date:</strong> Friday, December 12th</p>
+                                <p><strong>⏰ Time:</strong> 10:00 AM</p>
+                                <p><strong>📍 Location:</strong> Rue de la Loi 175<br>
+                                    <em>(in front of the European Council)</em>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p><strong>Please help share the event widely and join us in person.</strong></p>
+                    <a href="https://fb.me/e/3rdyQViJm" target="_blank" class="action-button">View Event Details →</a>
+                </div>
+
+
+                <div style="margin-top: 3rem; padding: 2rem; background: var(--light-gray); border-radius: 10px;">
+                    <h3 style="color: var(--dark-blue); margin-bottom: 1rem;">Learn More</h3>
+                    <p>Want to understand the full context? Explore our comprehensive database of documents,
+                        legal analysis, and financial reports.</p>
+                    <a href="index.html#database" class="action-button" style="margin-top: 1rem;">View Database →</a>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#presentation">Arguments</a>
+                <a href="index.html#database">Data</a>
+                <a href="index.html#about">About</a>
+            </div>
+            <p>2025 Frozen Assets Action Initiative.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                This is an independent information resource and is not affiliated with any government entity.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
