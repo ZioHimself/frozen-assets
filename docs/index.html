@@ -573,8 +573,9 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#presentation">Arguments</a></li>
-                <li><a href="#letter">Open Letter</a></li>
                 <li><a href="#database">Data</a></li>
+                <li><a href="#action">Take Action</a></li>
+                <li><a href="#letter">Open Letter</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
         </div>
@@ -587,9 +588,12 @@
             <p>A solution to Ukraine's needs and Europe's security</p>
             <div
                 style="display: flex; gap: 1rem; justify-content: center; align-items: center; margin-top: 2rem; flex-wrap: wrap;">
-                <a href="#presentation" class="cta-button">See Why This Matters</a>
+                <a href="#presentation" class="cta-button"
+                    style="background: rgba(255,255,255,0.2); border: 2px solid white;">See Why This Matters</a>
                 <a href="#database" class="cta-button"
                     style="background: rgba(255,255,255,0.2); border: 2px solid white;">Explore the Evidence</a>
+                <a href="#action" class="cta-button">Take Action
+                    Now</a>
             </div>
             <div class="scroll-indicator">
                 <span style="font-size: 2rem; color: white;">↓</span>
@@ -610,7 +614,7 @@
 
             <!-- Slide 1: Title Slide -->
             <div class="infographic-slide"
-                style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%); color: white;">
+                style="display: none; background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%); color: white;">
                 <h3 class="slide-title" style="color: white; border-color: var(--primary-yellow);">The Choice Belgium
                     Faces</h3>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
@@ -820,8 +824,12 @@
                             recognition of arbitral awards</li>
                         <li>✓ <strong>EU took GREATER risks for LESS:</strong> Used Russian private assets to compensate
                             investors (higher legal risk) - Ukraine's survival warrants equal tolerance</li>
-                        <li>✓ <strong>Multi-country participation exists:</strong> G7 already using windfall profits;
-                            burden-sharing mechanisms available</li>
+                        <li>✓ <strong>Multi-country participation exists:</strong> G7 already using windfall profits; <a
+                                href="https://www.thetimes.com/uk/politics/article/frozen-russian-assets-britain-q5k22km0r">UK
+                                willing to seize russian assets to send to Ukraine</a>;
+                            <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2903">burden-sharing
+                                mechanisms available</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -1555,9 +1563,42 @@
             </div>
 
             <!-- Slide 18: What You Can Do -->
-            <div class="infographic-slide">
+            <div id="action" class="infographic-slide">
                 <h3 class="slide-title">What You Can Do</h3>
                 <p style="font-size: 1.2rem; margin-bottom: 2rem; text-align: center;">Join the Campaign</p>
+
+                <!-- Featured: Demonstration -->
+                <div
+                    style="background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%); color: white; padding: 2.5rem; border-radius: 15px; margin-bottom: 3rem; box-shadow: 0 8px 30px rgba(211, 47, 47, 0.3);">
+                    <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px;">
+                            <img src="./public/images/make-russia-pay.jpeg"
+                                alt="Make Russia Pay - Join the Demonstration"
+                                style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3 style="font-size: 2rem; margin-bottom: 1rem; color: #fff;">📣 Join the Demonstration!
+                            </h3>
+                            <div style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                                <p style="margin-bottom: 1rem;"><strong>Thursday, December 12th</strong></p>
+                                <p style="margin-bottom: 1rem;">⏰ <strong>10:00 AM</strong></p>
+                                <p style="margin-bottom: 1rem;">📍 <strong>Rue de la Loi 175</strong><br>
+                                    <span style="font-size: 1.1rem;">(in front of the EU Council)</span>
+                                </p>
+                            </div>
+                            <a href="https://www.facebook.com/events/1614909679671481" target="_blank"
+                                style="display: inline-block; background: white; color: #d32f2f; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s;">
+                                View Event Details →
+                            </a>
+                        </div>
+                    </div>
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid rgba(255,255,255,0.3);">
+                        <p style="font-size: 1.2rem; text-align: center; font-weight: bold;">
+                            BELGIUM, STOP BLOCKING THE REPARATION LOAN.<br>
+                            UKRAINIAN LIVES OVER PROFIT!
+                        </p>
+                    </div>
+                </div>
 
                 <div class="stats-grid">
                     <div class="stat-card">
@@ -1589,6 +1630,7 @@
                             <li>Contact your MPs and the Prime Minister's office</li>
                             <li>Share the facts on social media</li>
                             <li>Sign petitions supporting the Reparations Loan</li>
+                            <li><strong>Join the demonstration on December 12th!</strong></li>
                         </ul>
                     </div>
                     <div class="branch-card">
@@ -1599,21 +1641,6 @@
                             <li>Build cross-party coalition for Belgian leadership</li>
                         </ul>
                     </div>
-                </div>
-
-                <div
-                    style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-top: 2rem;">
-                    <h4 style="color: var(--primary-yellow); font-size: 1.5rem; margin-bottom: 1rem;">Learn More & Take
-                        Action</h4>
-                    <p style="font-size: 1.2rem;">
-                        Visit <strong style="color: var(--primary-yellow);">frozen-assets.eu</strong> for:
-                    </p>
-                    <ul style="list-style: none; margin-top: 1rem; line-height: 1.8;">
-                        <li>📚 Full document database</li>
-                        <li>⚖️ Legal analyses</li>
-                        <li>💭 Expert opinions</li>
-                        <li>📧 Contact information for campaign</li>
-                    </ul>
                 </div>
             </div>
 
