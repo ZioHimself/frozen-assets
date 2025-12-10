@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Your Belgian Embassy - Take Action</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #005BBB;
+            --primary-yellow: #FFD500;
+            --dark-blue: #003366;
+            --light-gray: #f5f5f5;
+            --text-dark: #333;
+            --text-light: #666;
+            --action-red: #d32f2f;
+            --success-green: #2e7d32;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .logo img {
+            max-height: 38.4px;
+            height: auto;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        /* Introduction Box */
+        .intro-box {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+            box-shadow: 0 8px 30px rgba(0, 91, 187, 0.3);
+        }
+
+        .intro-box h2 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .intro-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Step Guide */
+        .step-guide {
+            margin: 3rem 0;
+        }
+
+        .step {
+            background: white;
+            border: 2px solid var(--light-gray);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s;
+        }
+
+        .step:hover {
+            box-shadow: 0 8px 20px rgba(0, 91, 187, 0.15);
+            border-color: var(--primary-blue);
+        }
+
+        .step.active {
+            border-color: var(--primary-blue);
+            box-shadow: 0 8px 20px rgba(0, 91, 187, 0.2);
+        }
+
+        .step.completed {
+            border-color: var(--success-green);
+            background: rgba(46, 125, 50, 0.05);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step.completed .step-number {
+            background: var(--success-green);
+        }
+
+        .step.completed .step-number::before {
+            content: "✓";
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            color: var(--dark-blue);
+            font-weight: bold;
+        }
+
+        .step-content {
+            margin-left: 66px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .required {
+            color: var(--action-red);
+        }
+
+        .hint {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.3rem;
+        }
+
+        /* Action Buttons */
+        .action-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .action-button:hover {
+            background: var(--dark-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 91, 187, 0.4);
+        }
+
+        .action-button:disabled {
+            background: var(--text-light);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .action-button.success {
+            background: var(--success-green);
+        }
+
+        .action-button.success:hover {
+            background: #1b5e20;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        /* Letter Preview */
+        .letter-preview {
+            background: white;
+            border: 2px solid var(--light-gray);
+            border-radius: 10px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .letter-preview h3 {
+            text-align: center;
+            color: var(--dark-blue);
+            margin-bottom: 2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .letter-preview p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .letter-preview .placeholder {
+            background: var(--primary-yellow);
+            padding: 2px 4px;
+            font-weight: bold;
+        }
+
+        .letter-preview .section-title {
+            font-weight: bold;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: rgba(0, 91, 187, 0.1);
+            border-left: 4px solid var(--primary-blue);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .info-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .warning-box {
+            background: rgba(255, 213, 0, 0.2);
+            border-left: 4px solid var(--primary-yellow);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-yellow);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .step-content {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .action-button {
+                width: 100%;
+            }
+
+            .letter-preview {
+                padding: 1.5rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../public/images/faa.favicon.blue.jpg" alt="Frozen Assets Action">
+                &nbsp;Frozen Assets Action
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html#presentation">Arguments</a></li>
+                <li><a href="../index.html#database">Data</a></li>
+                <li><a href="citizen-action.html">Take Action</a></li>
+                <li><a href="../index.html#letter">Open Letter</a></li>
+                <li><a href="../index.html#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <a href="citizen-action.html" class="back-link">← Back to Take Action</a>
+
+        <header class="page-header">
+            <h1 class="page-title">🌍 Contact a Belgian Embassy</h1>
+            <div class="page-subtitle">Make Your Voice Heard from Abroad</div>
+        </header>
+
+        <div class="intro-box">
+            <h2>Why Contact the Belgian Embassy?</h2>
+            <p>Even if you're not in Belgium, you can still influence this critical decision. Belgian embassies and
+                consulates report international public sentiment back to Brussels.</p>
+            <p>Your letter demonstrates that Belgium's decision on the Reparation Loan has global implications for
+                security and the rule-based international order.</p>
+            <p><strong>Follow the 5 simple steps below to send your letter!</strong></p>
+        </div>
+
+        <!-- Step Guide -->
+        <div class="step-guide">
+            <!-- Step 1: Fill in Country -->
+            <div class="step" id="step1">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <h2 class="step-title">Fill in your Country</h2>
+                </div>
+                <div class="step-content">
+                    <p>Enter the country where you're located. This will be used to address the letter to the Belgian
+                        Embassy in your country.</p>
+                    <div class="form-group">
+                        <label for="country">Your Country <span class="required">*</span></label>
+                        <input type="text" id="country" placeholder="e.g., United States, France, Germany..." required>
+                        <div class="hint">Enter the full name of your country</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Optional Numbers -->
+            <div class="step" id="step2">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <h2 class="step-title">Add Specific Data (Optional)</h2>
+                </div>
+                <div class="step-content">
+                    <p>If you have specific information about Russian hybrid threats or incidents in your country, you
+                        can add them here to strengthen your letter.</p>
+                    <div class="form-group">
+                        <label for="additionalData">Additional Data About Your Country (Optional)</label>
+                        <textarea id="additionalData"
+                            placeholder="Example: In [country], there have been [number] incidents of suspected Russian cyber attacks on critical infrastructure in the past year..."></textarea>
+                        <div class="hint">Include any relevant statistics, incidents, or specific concerns about
+                            security threats in your country</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Preview and Download -->
+            <div class="step" id="step3">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <h2 class="step-title">Preview & Print Your Letter</h2>
+                </div>
+                <div class="step-content">
+                    <p>Review your personalized letter below, then print it (you can save as PDF from the print dialog).
+                    </p>
+
+                    <div class="info-box">
+                        <p><strong>📋 Preview:</strong> The highlighted text shows where your information has been
+                            inserted.</p>
+                    </div>
+
+                    <div class="letter-preview" id="letterPreview">
+                        <!-- Letter content will be generated here -->
+                        <p style="text-align: center; color: var(--text-light); font-style: italic;">
+                            Fill in your country in Step 1 to see the letter preview
+                        </p>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="action-button" onclick="printLetter()" id="printBtn" disabled>
+                            🖨️ Print Letter (or Save as PDF)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Sign -->
+            <div class="step" id="step4">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <h2 class="step-title">Sign Your Letter</h2>
+                </div>
+                <div class="step-content">
+                    <p>After printing or downloading your letter:</p>
+                    <div class="info-box">
+                        <p><strong>✍️ Add your signature</strong> at the bottom of the letter under "Signed by:"</p>
+                        <p><strong>📝 Include your details:</strong></p>
+                        <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                            <li>Your full name</li>
+                            <li>Your title or affiliation (if applicable)</li>
+                            <li>Your city/country</li>
+                            <li>Date</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <p><strong>💡 Tip:</strong> Consider gathering multiple signatures! The letter uses "we" to
+                            allow for multiple signatories. You can share this letter with colleagues, friends, or
+                            community members who share your concerns.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5: Send -->
+            <div class="step" id="step5">
+                <div class="step-header">
+                    <div class="step-number">5</div>
+                    <h2 class="step-title">Send to Your Belgian Embassy</h2>
+                </div>
+                <div class="step-content">
+                    <p>Find your nearest Belgian Embassy or Consulate and send your signed letter.</p>
+
+                    <div class="info-box">
+                        <p><strong>📍 Find Your Belgian Embassy:</strong></p>
+                        <p>Visit the official Belgian Foreign Affairs website to find contact details:</p>
+                        <a href="https://diplomatie.belgium.be/en/embassies-and-consulates" target="_blank"
+                            class="action-button" style="margin-top: 1rem; display: inline-block;">
+                            Find Belgian Embassy →
+                        </a>
+                    </div>
+
+                    <div class="warning-box">
+                        <p><strong>📮 How to Send:</strong></p>
+                        <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                            <li><strong>Email:</strong> Fastest option - scan and email your signed letter</li>
+                            <li><strong>Physical Mail:</strong> Send via postal service to the embassy address</li>
+                            <li><strong>In Person:</strong> Deliver directly if you're near the embassy</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box" style="margin-top: 1.5rem;">
+                        <p><strong>📣 Amplify Your Impact:</strong></p>
+                        <p>After sending your letter, consider sharing your action on social media with hashtags
+                            <strong>#MakeRussiaPay</strong> and <strong>#UnblockReparationLoan</strong> to encourage
+                            others!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Resources -->
+        <div style="margin-top: 3rem; padding: 2rem; background: var(--light-gray); border-radius: 10px;">
+            <h3 style="color: var(--dark-blue); margin-bottom: 1rem;">📚 More Ways to Help</h3>
+            <p>Looking for other ways to support this cause? Check out the full action guide with more steps you can
+                take.</p>
+            <a href="citizen-action.html" class="action-button" style="margin-top: 1rem; display: inline-block;">
+                View All Action Steps →
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#presentation">Arguments</a>
+                <a href="../index.html#database">Data</a>
+                <a href="../index.html#about">About</a>
+            </div>
+            <p>2025 Frozen Assets Action Initiative.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                This is an independent information resource and is not affiliated with any government entity.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Letter template
+        const letterTemplate = `<p><strong>His Excellency / Her Excellency</strong><br>
+<strong>The Ambassador of the Kingdom of Belgium</strong><br>
+<strong>Embassy of Belgium in <span class="placeholder" id="countryPlaceholder1">[COUNTRY]</span>,</strong></p>
+
+<p><strong>Your Excellency,</strong></p>
+
+<p>We, the undersigned citizens and residents living in <span class="placeholder" id="countryPlaceholder2">[COUNTRY]</span>, are writing to urge the Government of Belgium to demonstrate decisive leadership on the use of immobilised Russian state assets to support Ukraine and reinforce Europe's security.</p>
+
+<p>Belgium currently holds approximately €175 billion in cash (matured from bond holdings) of immobilised Russian Central Bank assets — nearly two-thirds of all such assets frozen worldwide. This places Belgium in a uniquely influential position at a moment when Russia's war against Ukraine has direct implications for European stability and for Belgium's own national security.</p>
+
+<p class="section-title">1. Belgium is increasingly targeted by hybrid threats<span id="additionalDataSection"></span></p>
+
+<p>Recent drone-related disruptions at Belgian airports, alongside repeated detections near port areas, military installations, and critical infrastructure, point to a clear intensification of Russian hybrid operations in Western Europe. These incidents are part of a deliberate strategy intended to cause economic damage, endanger citizens, and undermine national security.</p>
+
+<p>Strengthening Europe's deterrence is essential. Supporting Ukraine — the country currently containing Russia's military aggression — is both an act of solidarity and a measure of self-protection for all EU member states, including Belgium.</p>
+
+<p>A multi-year financing package backed by frozen Russian assets would eliminate Russia's expectation that it can simply "wait out" Western support. This approach raises the cost of aggression for the Kremlin and increases the likelihood of genuine negotiations. Importantly, this mechanism reduces political uncertainty by providing predictable long-term support without requiring annual EU budget negotiations.</p>
+
+<p class="section-title">2. The European proposal is responsible, legally grounded, and urgently needed</p>
+
+<p>The European Commission's proposed "reparation loan" does not seize Russian state assets. Instead, it allows their temporary substitution: Euroclear would transfer the cash to the Commission, which would then issue an interest-free loan to Ukraine. The original Russian assets would be repaid only once Russia ends its aggression and provides compensation for war damages.</p>
+
+<p>International law provides a robust basis for such action through the doctrine of countermeasures against states committing internationally wrongful acts (UN ILC Articles on State Responsibility, Art. 22, 49–54).</p>
+
+<p>Historical precedents exist — including Iraqi, German, Japanese, Iranian, and Libyan sovereign assets — demonstrating that the international community has long applied various mechanisms for handling frozen assets linked to aggression or serious violations.</p>
+
+<p>Furthermore, Russia itself has nationalised Belgian and European private assets, reinforcing the principle <em>ex iniuria ius non oritur</em>: no state may derive rights from its own unlawful actions.</p>
+
+<p class="section-title">3. The cost of inaction is already visible</p>
+
+<p>Russian sabotage and cyber operations are imposing real financial and security costs on Europe. Drone disruptions at Brussels and Liège airports alone resulted in €1.5–3 million in direct losses.</p>
+
+<p>The question now is how long Belgium can remain vulnerable without strengthening deterrence — and whether returning billions to a state conducting hostile operations in Europe would further endanger Belgian and EU security.</p>
+
+<p class="section-title">4. Belgium is not alone: partners stand ready, and solutions exist</p>
+
+<p>Prime Minister De Wever's call for risk sharing is valid. Several EU states — including Germany, Finland, Sweden, and the Baltic countries — support establishing a joint guarantee framework. The UK, Canada, and Japan are exploring similar solutions.</p>
+
+<p>A coordinated guarantee mechanism would spread potential legal or arbitration risks, reducing the burden on any one state while maximising collective deterrence.</p>
+
+<p>Belgium is not isolated. On the contrary, Belgium can help shape a fair, balanced, and effective reparation loan structure. Belgium has a strong diplomatic tradition and now has an opportunity to lead once more — strengthening European defence, security, and global leverage while upholding international law.</p>
+
+<p>We thank you for your attention to this urgent matter.<br>
+We sincerely hope Belgium will rise to meet this moment, honouring its history and fulfilling the responsibility that its unique position confers.</p>
+
+<p><strong>Signed by:</strong></p>
+
+<p style="margin-top: 2rem; color: var(--text-light); font-style: italic;">
+[Your signature, name, title/affiliation, city/country, and date will be added here]
+</p>`;
+
+        // Update letter preview when country changes
+        document.getElementById('country').addEventListener('input', updatePreview);
+        document.getElementById('additionalData').addEventListener('input', updatePreview);
+
+        function updatePreview() {
+            const country = document.getElementById('country').value.trim();
+            const additionalData = document.getElementById('additionalData').value.trim();
+            const previewDiv = document.getElementById('letterPreview');
+            const printBtn = document.getElementById('printBtn');
+
+            if (country) {
+                // Show letter with placeholders replaced
+                previewDiv.innerHTML = '<h3>Your Personalized Letter</h3>' + letterTemplate;
+
+                // Replace country placeholders
+                document.getElementById('countryPlaceholder1').textContent = country;
+                document.getElementById('countryPlaceholder2').textContent = country;
+
+                // Add additional data if provided
+                if (additionalData) {
+                    const additionalSection = document.getElementById('additionalDataSection');
+                    additionalSection.innerHTML = '<br><span class="placeholder" style="display: block; margin-top: 0.5rem;">' +
+                        additionalData + '</span>';
+                }
+
+                // Enable button
+                printBtn.disabled = false;
+
+                // Mark step 1 as completed
+                document.getElementById('step1').classList.add('completed');
+                document.getElementById('step3').classList.add('active');
+            } else {
+                // Reset preview
+                previewDiv.innerHTML = `<p style="text-align: center; color: var(--text-light); font-style: italic;">
+                    Fill in your country in Step 1 to see the letter preview
+                </p>`;
+                printBtn.disabled = true;
+                document.getElementById('step1').classList.remove('completed');
+                document.getElementById('step3').classList.remove('active');
+            }
+
+            // Mark step 2 as completed if data is added
+            if (additionalData) {
+                document.getElementById('step2').classList.add('completed');
+            } else {
+                document.getElementById('step2').classList.remove('completed');
+            }
+        }
+
+        function printLetter() {
+            const country = document.getElementById('country').value.trim();
+            if (!country) {
+                alert('Please enter your country first!');
+                return;
+            }
+
+            // Create a print-friendly version
+            const printContent = generateLetterContent();
+            const printWindow = window.open('', '', 'width=800,height=600');
+            printWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>Letter to Belgian Embassy</title>
+                    <style>
+                        body {
+                            font-family: Georgia, serif;
+                            max-width: 800px;
+                            margin: 2rem auto;
+                            padding: 2rem;
+                            line-height: 1.8;
+                        }
+                        p { margin-bottom: 1rem; text-align: justify; }
+                        .section-title { font-weight: bold; margin-top: 1.5rem; }
+                        em { font-style: italic; }
+                        @media print {
+                            body { margin: 1rem; }
+                        }
+                    </style>
+                </head>
+                <body>
+                    ${printContent}
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
+            printWindow.print();
+
+            // Mark step 3 as completed
+            document.getElementById('step3').classList.add('completed');
+            document.getElementById('step4').classList.add('active');
+        }
+
+        function generateLetterContent() {
+            const country = document.getElementById('country').value.trim();
+            const additionalData = document.getElementById('additionalData').value.trim();
+
+            let additionalDataText = '';
+            if (additionalData) {
+                additionalDataText = '<br>' + additionalData;
+            }
+
+            return `
+<p><strong>His Excellency / Her Excellency</strong><br>
+<strong>The Ambassador of the Kingdom of Belgium</strong><br>
+<strong>Embassy of Belgium in ${country},</strong></p>
+
+<p><strong>Your Excellency,</strong></p>
+
+<p>We, the undersigned citizens and resident living in ${country}, are writing to urge the Government of Belgium to demonstrate decisive leadership on the use of immobilised Russian state assets to support Ukraine and reinforce Europe's security.</p>
+
+<p>Belgium currently holds approximately €175 billion in cash (matured from bond holdings) of immobilised Russian Central Bank assets — nearly two-thirds of all such assets frozen worldwide. This places Belgium in a uniquely influential position at a moment when Russia's war against Ukraine has direct implications for European stability and for Belgium's own national security.</p>
+
+<p class="section-title">1. Belgium is increasingly targeted by hybrid threats${additionalDataText}</p>
+
+<p>Recent drone-related disruptions at Belgian airports, alongside repeated detections near port areas, military installations, and critical infrastructure, point to a clear intensification of Russian hybrid operations in Western Europe. These incidents are part of a deliberate strategy intended to cause economic damage, endanger citizens, and undermine national security.</p>
+
+<p>Strengthening Europe's deterrence is essential. Supporting Ukraine — the country currently containing Russia's military aggression — is both an act of solidarity and a measure of self-protection for all EU member states, including Belgium.</p>
+
+<p>A multi-year financing package backed by frozen Russian assets would eliminate Russia's expectation that it can simply "wait out" Western support. This approach raises the cost of aggression for the Kremlin and increases the likelihood of genuine negotiations. Importantly, this mechanism reduces political uncertainty by providing predictable long-term support without requiring annual EU budget negotiations.</p>
+
+<p class="section-title">2. The European proposal is responsible, legally grounded, and urgently needed</p>
+
+<p>The European Commission's proposed "reparation loan" does not seize Russian state assets. Instead, it allows their temporary substitution: Euroclear would transfer the cash to the Commission, which would then issue an interest-free loan to Ukraine. The original Russian assets would be repaid only once Russia ends its aggression and provides compensation for war damages.</p>
+
+<p>International law provides a robust basis for such action through the doctrine of countermeasures against states committing internationally wrongful acts (UN ILC Articles on State Responsibility, Art. 22, 49–54).</p>
+
+<p>Historical precedents exist — including Iraqi, German, Japanese, Iranian, and Libyan sovereign assets — demonstrating that the international community has long applied various mechanisms for handling frozen assets linked to aggression or serious violations.</p>
+
+<p>Furthermore, Russia itself has nationalised Belgian and European private assets, reinforcing the principle <em>ex iniuria ius non oritur</em>: no state may derive rights from its own unlawful actions.</p>
+
+<p class="section-title">3. The cost of inaction is already visible</p>
+
+<p>Russian sabotage and cyber operations are imposing real financial and security costs on Europe. Drone disruptions at Brussels and Liège airports alone resulted in €1.5–3 million in direct losses.</p>
+
+<p>The question now is how long Belgium can remain vulnerable without strengthening deterrence — and whether returning billions to a state conducting hostile operations in Europe would further endanger Belgian and EU security.</p>
+
+<p class="section-title">4. Belgium is not alone: partners stand ready, and solutions exist</p>
+
+<p>Prime Minister De Wever's call for risk sharing is valid. Several EU states — including Germany, Finland, Sweden, and the Baltic countries — support establishing a joint guarantee framework. The UK, Canada, and Japan are exploring similar solutions.</p>
+
+<p>A coordinated guarantee mechanism would spread potential legal or arbitration risks, reducing the burden on any one state while maximising collective deterrence.</p>
+
+<p>Belgium is not isolated. On the contrary, Belgium can help shape a fair, balanced, and effective reparation loan structure. Belgium has a strong diplomatic tradition and now has an opportunity to lead once more — strengthening European defence, security, and global leverage while upholding international law.</p>
+
+<p>We thank you for your attention to this urgent matter.<br>
+We sincerely hope Belgium will rise to meet this moment, honouring its history and fulfilling the responsibility that its unique position confers.</p>
+
+<p><strong>Signed by:</strong></p>
+
+<p style="margin-top: 4rem;">
+_______________________________
+</p>`;
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set initial state
+            document.getElementById('step1').classList.add('active');
+        });
+    </script>
+</body>
+
+</html>
