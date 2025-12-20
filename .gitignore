@@ -234,3 +234,4 @@ METADATA_QUICKSTART.md
 event-metadata.template.json
 event-metadata.example.json
 scripts/google-apps-script-events.js
+scripts/google-apps-script-events.v*.js

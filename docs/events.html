@@ -684,14 +684,42 @@
             ];
         }
 
+        // Transform event data from API format to internal format
+        function transformEventData(apiEvent) {
+            // Parse date and extract year
+            const date = apiEvent.date ? new Date(apiEvent.date).toISOString().split('T')[0] : '';
+            const year = date.split('-')[0];
+
+            return {
+                date: date,
+                year: year,
+                name: apiEvent.name || '',
+                place: apiEvent.place || '',
+                type: apiEvent.type || 'Event',
+                organizers: apiEvent.organizers || [],
+                tags: apiEvent.tags || [],
+                driveUrl: apiEvent.drive_url || '',
+                announcement: apiEvent.announcement_url ? {
+                    url: apiEvent.announcement_url,
+                    title: apiEvent.announcement_title || 'Event Announcement',
+                    date: apiEvent.announcement_date || ''
+                } : null,
+                photoCount: apiEvent.media_photos || 0,
+                videoCount: apiEvent.media_videos || 0,
+                description: apiEvent.description || '',
+                notes: apiEvent.notes || ''
+            };
+        }
+
         // Initialize the page
         async function init() {
-            // Load events (replace with actual API call)
-            fetch('https://script.google.com/macros/s/AKfycbxqG8TO_7nTxVPMd6INh0D8q4O2AuRQtevB1uZ5ceJF4MZEmygYdqTTl6N-Gcux_V4h/exec')
+            // Load events from Google Apps Script
+            fetch('https://script.google.com/macros/s/AKfycbzwkdsn95MkUUw6WVeri05Rzfj4U3sEOpjbHegBTqNXkcg7sYKhYdyqQLlZATmYQ3GgdA/exec')
                 .then(response => response.json())
                 .then(data => {
-                    if (data.success) {
-                        allEvents = data.data;
+                    // API returns array directly
+                    if (Array.isArray(data) && data.length > 0) {
+                        allEvents = data.map(transformEventData);
                         filteredEvents = [...allEvents];
                         populateFilters();
                         applyFiltersFromURL();
@@ -699,10 +727,15 @@
                         document.getElementById('loadingState').style.display = 'none';
                         document.getElementById('eventsContainer').style.display = currentView === 'grid' ? 'grid' : 'flex';
                     } else {
-                        console.error('Error loading events:', data.error);
+                        console.error('No events data received');
                         // Fallback to mock data
                         allEvents = loadMockEvents();
-                        // ... same init code
+                        filteredEvents = [...allEvents];
+                        populateFilters();
+                        applyFiltersFromURL();
+                        applyFilters();
+                        document.getElementById('loadingState').style.display = 'none';
+                        document.getElementById('eventsContainer').style.display = currentView === 'grid' ? 'grid' : 'flex';
                     }
                 })
                 .catch(error => {
