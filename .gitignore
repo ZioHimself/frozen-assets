@@ -231,6 +231,7 @@ scripts/knowledge_base/
 EVENTS_SETUP.md
 EVENT_METADATA_SCHEMA.md
 METADATA_QUICKSTART.md
+Events_DB.csv
 event-metadata.template.json
 event-metadata.example.json
 scripts/google-apps-script-events.js

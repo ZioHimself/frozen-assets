@@ -663,7 +663,8 @@
                         title: 'Official Event Announcement'
                     },
                     photoCount: 38,
-                    videoCount: 6
+                    videoCount: 6,
+                    mediaFeatures: []
                 },
                 {
                     date: '2025-12-14',
@@ -679,7 +680,8 @@
                     tags: ['Belgium', 'Ukraine', 'Euroclear', 'Frozen Assets'],
                     driveUrl: `https://drive.google.com/drive/folders/1YGSqx1rbYRIEaNtRfdkMxnsRD_uNO1Vm?usp=drive_link`,
                     photoCount: 0,
-                    videoCount: 0
+                    videoCount: 0,
+                    mediaFeatures: []
                 }
             ];
         }
@@ -707,7 +709,8 @@
                 photoCount: apiEvent.media_photos || 0,
                 videoCount: apiEvent.media_videos || 0,
                 description: apiEvent.description || '',
-                notes: apiEvent.notes || ''
+                notes: apiEvent.notes || '',
+                mediaFeatures: apiEvent.media_features || []
             };
         }
 
@@ -945,6 +948,31 @@
                 </a>`
                 : '';
 
+            // Media features (articles/press)
+            const mediaFeaturesHTML = event.mediaFeatures && event.mediaFeatures.length > 0
+                ? `<div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--light-gray);">
+                    <div style="font-size: 0.9rem; font-weight: 600; color: var(--dark-blue); margin-bottom: 0.5rem;">
+                        📰 Media Coverage:
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        ${event.mediaFeatures.map((url, index) => {
+                            // Extract domain from URL for display
+                            let displayText = url;
+                            try {
+                                const urlObj = new URL(url);
+                                displayText = urlObj.hostname.replace('www.', '');
+                            } catch (e) {
+                                displayText = `Article ${index + 1}`;
+                            }
+                            return `<a href="${url}" target="_blank" onclick="event.stopPropagation()" style="color: var(--primary-blue); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 0.3rem;">
+                                <span>🔗</span>
+                                <span style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">${displayText}</span>
+                            </a>`;
+                        }).join('')}
+                    </div>
+                </div>`
+                : '';
+
             return `
                 <div class="event-card" onclick="window.open('${event.driveUrl}', '_blank')">
                     <div class="event-card-header">
@@ -959,6 +987,7 @@
                             ${event.tags.map(tag => `<span class="event-tag">${tag}</span>`).join('')}
                         </div>
                         ${mediaHTML}
+                        ${mediaFeaturesHTML}
                         <div class="event-actions">
                             ${announcementHTML}
                             <a href="${event.driveUrl}" class="event-link" target="_blank" onclick="event.stopPropagation()">
@@ -983,6 +1012,28 @@
             if (event.videoCount) mediaInfo.push(`🎥 ${event.videoCount}`);
             const mediaText = mediaInfo.length > 0 ? mediaInfo.join(' ') : '';
 
+            // Media features count
+            const mediaFeaturesText = event.mediaFeatures && event.mediaFeatures.length > 0
+                ? `📰 ${event.mediaFeatures.length} article${event.mediaFeatures.length > 1 ? 's' : ''}`
+                : '';
+
+            // Media features links (for list view, we'll show them inline)
+            const mediaFeaturesHTML = event.mediaFeatures && event.mediaFeatures.length > 0
+                ? `<div style="margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+                    <span style="font-size: 0.85rem; color: var(--text-light); font-weight: 600;">📰 Media:</span>
+                    ${event.mediaFeatures.map((url, index) => {
+                        let displayText = url;
+                        try {
+                            const urlObj = new URL(url);
+                            displayText = urlObj.hostname.replace('www.', '');
+                        } catch (e) {
+                            displayText = `Article ${index + 1}`;
+                        }
+                        return `<a href="${url}" target="_blank" style="color: var(--primary-blue); text-decoration: none; font-size: 0.85rem;">🔗 ${displayText}</a>`;
+                    }).join('')}
+                </div>`
+                : '';
+
             return `
                 <div class="event-list-item">
                     <div class="event-list-info">
@@ -993,8 +1044,10 @@
                             <span>🏷️ ${event.type}</span>
                             <span>👥 ${organizersText}</span>
                             ${mediaText ? `<span>${mediaText}</span>` : ''}
+                            ${mediaFeaturesText ? `<span>${mediaFeaturesText}</span>` : ''}
                             ${event.announcement ? '<span>📢 Announcement</span>' : ''}
                         </div>
+                        ${mediaFeaturesHTML}
                     </div>
                     <a href="${event.driveUrl}" class="event-list-action" target="_blank">
                         View Event →
