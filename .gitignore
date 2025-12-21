@@ -15,7 +15,8 @@ out/
 .temp/
 .tmp/
 *.log
-!logs/uptime-monitor.log # keep uptime log files
+# keep uptime log files
+!logs/uptime-monitor.log
 *.tmp
 *.temp
 
