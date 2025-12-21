@@ -15,7 +15,7 @@ permissions:
 jobs:
   uptime-check:
     runs-on: ubuntu-latest
-    timeout-minutes: 20    # cancel the job if it runs over 20 minutes
+    timeout-minutes: 1    # cancel the job if it runs over 20 minutes
 
     steps:
       - uses: actions/checkout@v6
