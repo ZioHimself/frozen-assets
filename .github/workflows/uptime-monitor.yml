@@ -1,0 +1,36 @@
+# This website monitor action was developed based on the Getting Started manual at link https://github.com/cd-roman/uptime-monitor/blob/main/docs/GETTING_STARTED.md
+# 
+# IMPORTANT NOTE: Please be aware that running this Action may incur charges from GitHub. Check your usage under Settings > Billing & Licensing > Usage. As of June 2025, usage in public repositories is free. Private repositories include a limited number of free minutes monthly. Once you exceed your free minutes amount, each workflow run will be billed by GitHub. It is your responsibility to check GitHub’s billing changes.
+
+name: Website Uptime Monitor
+on:
+  schedule:
+    - cron: '0 7-23/2 * * *'  # Runs every 2 hours, between 07:00 AM and 11:59 PM
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  uptime-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20    # cancel the job if it runs over 20 minutes
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Monitor websites
+        uses: cd-roman/uptime-monitor@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          sites: |
+            https://ziohimself.github.io/frozen-assets/
+          timezone: "Europe/Brussels"
+          log-file: "logs/uptime-monitor.log"
+          commit-message: "📊 Update uptime log"
+          timeout: "15"
+          success-codes: "200,201,204"
+          max-concurrent: "5"
+          create-issue: "true"
