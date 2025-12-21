@@ -32,5 +32,5 @@ jobs:
           commit-message: "📊 Update uptime log"
           timeout: "15"
           success-codes: "200,201,204"
-          max-concurrent: "5"
+          max-concurrent: "1"
           create-issue: "true"
