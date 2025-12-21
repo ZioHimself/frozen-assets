@@ -1,3 +1,5 @@
+[![Website Uptime Monitor](https://github.com/ZioHimself/frozen-assets/actions/workflows/uptime-monitor.yml/badge.svg)](https://github.com/ZioHimself/frozen-assets/actions/workflows/uptime-monitor.yml)
+
 # Ukraine Reconstruction Fund
 
 A comprehensive resource tracking the international effort to utilize frozen Russian assets for Ukraine's reconstruction.
